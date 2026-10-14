@@ -30,7 +30,7 @@ En móvil, los cuatro KPIs forman un grupo horizontal deslizable con ajuste por 
 
 La navegación permanece fija: menú inferior en móvil y rail lateral en escritorio. El contenido reserva espacio para evitar que el menú tape la última sección.
 
-Las mini barras de los KPIs representan valores reales por plataforma, en el orden Instagram, TikTok y YouTube. El gráfico de productos permite cambiar entre comisiones y unidades vendidas, ajustando las alturas y la escala. Las ayudas contextuales explican las fórmulas y los productos sin añadir paneles redundantes. Se abren al pulsar o con Enter y se cierran con Escape o al pulsar fuera. En móvil se centran para no salirse de la pantalla; en escritorio se anclan al control.
+Las mini barras de los KPIs representan valores reales por plataforma, en el orden Instagram, TikTok y YouTube. Cada barra tiene un tooltip con la red, su valor exacto y su contribución al total o los datos usados en el cálculo; admite hover, pulsación y teclado. El gráfico de productos permite cambiar entre comisiones y unidades vendidas, ajustando las alturas y la escala. Las ayudas contextuales explican las fórmulas y los productos sin añadir paneles redundantes. Se abren al pulsar o con Enter y se cierran con Escape o al pulsar fuera. En móvil se centran para no salirse de la pantalla; en escritorio se anclan al control.
 
 Los filtros Todas / Instagram / TikTok / YouTube actualizan las filas, el contador y los totales de la tabla. Los KPIs y drivers siguen mostrando todas las redes; el texto junto a los filtros lo aclara. Las columnas secundarias se consultan en los detalles de campaña cuando no caben.
 
