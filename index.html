@@ -18,7 +18,7 @@
   >
     <a
       href="#contenido"
-      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:rounded-lg focus:bg-white focus:p-4 focus:text-black"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:rounded-lg focus:bg-white focus:p-4 focus:text-black motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
       >Saltar al contenido</a
     >
     <div
@@ -29,23 +29,22 @@
         class="pointer-events-none absolute -top-28 right-0 -z-10 h-64 w-3/4 rotate-[-20deg] rounded-full bg-linear-to-l from-orange-700/45 via-stone-400/35 to-transparent blur-3xl"
       ></div>
       <aside
-        class="flex items-center gap-4 border-b border-white/5 p-1 sm:sticky sm:top-3 sm:h-[calc(100vh-1.5rem)] sm:flex-col sm:border-r sm:border-b-0 sm:py-3"
+        class="flex flex-wrap items-center gap-3 border-b border-white/5 p-1 sm:sticky sm:top-3 sm:h-[calc(100vh-1.5rem)] sm:flex-col sm:border-r sm:border-b-0 sm:py-3"
       >
         <a
           href="#resumen"
           aria-label="Órbita, resumen"
-          class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-white text-xl font-semibold text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-white text-xl font-semibold text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
           >ó</a
         >
         <nav
           aria-label="Navegación principal"
-          class="flex gap-1 sm:mt-3 sm:flex-col sm:gap-2"
+          class="order-3 flex w-full gap-1 sm:order-none sm:mt-3 sm:w-auto sm:flex-col sm:gap-2"
         >
           <a
             href="#resumen"
             aria-label="Resumen"
-            title="Resumen"
-            class="flex size-8 items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            class="group/nav relative flex size-11 flex-1 flex-col gap-0.5 sm:size-8 sm:flex-none sm:flex-row items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [body:has(#resumen:target)_&]:bg-white/15 [body:has(#resumen:target)_&]:text-white [body:has(#resumen:target)_&]:ring-1 [body:has(#resumen:target)_&]:ring-white/25 [body:not(:has(main_:target))_&]:bg-white/15 [body:not(:has(main_:target))_&]:text-white"
             ><svg
               aria-hidden="true"
               class="size-4"
@@ -57,12 +56,16 @@
               stroke-linejoin="round"
             >
               <rect x="3" y="3" width="7" height="18" rx="1"></rect>
-              <path d="M14 3h7v7h-7zM14 14h7v7h-7z"></path></svg></a
+              <path d="M14 3h7v7h-7zM14 14h7v7h-7z"></path></svg
+            ><span
+              aria-hidden="true"
+              class="text-[0.625rem] leading-3 sm:absolute sm:left-full sm:top-1/2 sm:z-40 sm:ml-3 sm:hidden sm:-translate-y-1/2 sm:whitespace-nowrap sm:rounded-lg sm:border sm:border-white/15 sm:bg-neutral-900 sm:px-3 sm:py-2 sm:text-xs sm:shadow-xl sm:group-hover/nav:block sm:group-focus-visible/nav:block"
+              >Resumen</span
+            ></a
           ><a
             href="#rendimiento"
             aria-label="Rendimiento"
-            title="Rendimiento"
-            class="flex size-8 items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            class="group/nav relative flex size-11 flex-1 flex-col gap-0.5 sm:size-8 sm:flex-none sm:flex-row items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [body:has(#rendimiento:target)_&]:bg-white/15 [body:has(#rendimiento:target)_&]:text-white [body:has(#rendimiento:target)_&]:ring-1 [body:has(#rendimiento:target)_&]:ring-white/25"
             ><svg
               aria-hidden="true"
               class="size-4"
@@ -74,12 +77,16 @@
               stroke-linejoin="round"
             >
               <rect x="4" y="3" width="16" height="18" rx="3"></rect>
-              <path d="M8 16v-4M12 16V7M16 16v-7"></path></svg></a
+              <path d="M8 16v-4M12 16V7M16 16v-7"></path></svg
+            ><span
+              aria-hidden="true"
+              class="text-[0.625rem] leading-3 sm:absolute sm:left-full sm:top-1/2 sm:z-40 sm:ml-3 sm:hidden sm:-translate-y-1/2 sm:whitespace-nowrap sm:rounded-lg sm:border sm:border-white/15 sm:bg-neutral-900 sm:px-3 sm:py-2 sm:text-xs sm:shadow-xl sm:group-hover/nav:block sm:group-focus-visible/nav:block"
+              >Rendimiento</span
+            ></a
           ><a
             href="#campanas"
             aria-label="Campañas"
-            title="Campañas"
-            class="flex size-8 items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            class="group/nav relative flex size-11 flex-1 flex-col gap-0.5 sm:size-8 sm:flex-none sm:flex-row items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [body:has(#campanas:target)_&]:bg-white/15 [body:has(#campanas:target)_&]:text-white [body:has(#campanas:target)_&]:ring-1 [body:has(#campanas:target)_&]:ring-white/25"
             ><svg
               aria-hidden="true"
               class="size-4"
@@ -92,12 +99,16 @@
             >
               <path
                 d="M4 10v5h4l11 4V6L8 10H4ZM8 15l2 6h3l-2-5M22 10v5"
-              ></path></svg></a
+              ></path></svg
+            ><span
+              aria-hidden="true"
+              class="text-[0.625rem] leading-3 sm:absolute sm:left-full sm:top-1/2 sm:z-40 sm:ml-3 sm:hidden sm:-translate-y-1/2 sm:whitespace-nowrap sm:rounded-lg sm:border sm:border-white/15 sm:bg-neutral-900 sm:px-3 sm:py-2 sm:text-xs sm:shadow-xl sm:group-hover/nav:block sm:group-focus-visible/nav:block"
+              >Campañas</span
+            ></a
           ><a
             href="#retorno"
             aria-label="Retorno"
-            title="Retorno"
-            class="flex size-8 items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            class="group/nav relative flex size-11 flex-1 flex-col gap-0.5 sm:size-8 sm:flex-none sm:flex-row items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [body:has(#retorno:target)_&]:bg-white/15 [body:has(#retorno:target)_&]:text-white [body:has(#retorno:target)_&]:ring-1 [body:has(#retorno:target)_&]:ring-white/25"
             ><svg
               aria-hidden="true"
               class="size-4"
@@ -111,11 +122,16 @@
               <circle cx="7" cy="7" r="3"></circle>
               <circle cx="17" cy="17" r="3"></circle>
               <path d="M5 19 19 5"></path></svg
-          ></a>
+            ><span
+              aria-hidden="true"
+              class="text-[0.625rem] leading-3 sm:absolute sm:left-full sm:top-1/2 sm:z-40 sm:ml-3 sm:hidden sm:-translate-y-1/2 sm:whitespace-nowrap sm:rounded-lg sm:border sm:border-white/15 sm:bg-neutral-900 sm:px-3 sm:py-2 sm:text-xs sm:shadow-xl sm:group-hover/nav:block sm:group-focus-visible/nav:block"
+              >Retorno</span
+            ></a
+          >
         </nav>
         <span
           aria-hidden="true"
-          class="ml-auto flex size-7 items-center justify-center rounded-full border border-white/15 bg-stone-800 text-xs text-stone-200 sm:mt-auto sm:ml-0"
+          class="order-2 ml-auto flex size-7 items-center justify-center rounded-full border border-white/15 bg-stone-800 text-xs text-stone-200 sm:order-none sm:mt-auto sm:ml-0"
           >C</span
         >
       </aside>
@@ -128,7 +144,7 @@
               <a
                 href="#resumen"
                 aria-label="Volver al resumen"
-                class="flex size-7 items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                class="flex size-7 items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                 ><svg
                   aria-hidden="true"
                   class="size-4"
@@ -141,7 +157,19 @@
                 >
                   <path d="M19 12H5M10 7l-5 5 5 5"></path></svg></a
               ><span>Mi espacio</span><span aria-hidden="true">›</span
-              ><span class="text-neutral-100">Resumen</span>
+              ><span
+                class="text-neutral-100 [body:has(#rendimiento:target)_&]:hidden [body:has(#campanas:target)_&]:hidden [body:has(#retorno:target)_&]:hidden"
+                >Resumen</span
+              ><span
+                class="hidden text-neutral-100 [body:has(#rendimiento:target)_&]:inline"
+                >Rendimiento</span
+              ><span
+                class="hidden text-neutral-100 [body:has(#campanas:target)_&]:inline"
+                >Campañas</span
+              ><span
+                class="hidden text-neutral-100 [body:has(#retorno:target)_&]:inline"
+                >Retorno</span
+              >
             </div>
             <span
               class="rounded-md border border-white/5 bg-white/5 px-2 py-1.5 text-[0.65rem] text-neutral-300"
@@ -157,36 +185,60 @@
                 Crea con intención. Mide tu impacto.
               </p>
             </div>
-            <span
-              class="flex items-center gap-2 rounded-xl bg-white px-3 py-2 text-[0.65rem] font-medium text-neutral-950"
-              ><svg
-                aria-hidden="true"
-                class="size-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+            <details class="group relative">
+              <!-- Período fijo del reporte de ejemplo. -->
+              <summary
+                class="flex min-h-10 cursor-pointer list-none items-center gap-2 rounded-xl bg-white px-3 py-2 text-[0.65rem] font-medium text-neutral-950 hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
               >
-                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                <path d="M7 3v4M17 3v4M3 11h18"></path>
-              </svg>
-              Septiembre 2026</span
-            >
+                <svg
+                  aria-hidden="true"
+                  class="size-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                  <path d="M7 3v4M17 3v4M3 11h18"></path>
+                </svg>
+                Septiembre 2026<svg
+                  aria-hidden="true"
+                  class="size-3 group-open:rotate-180"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="m4 6 4 4 4-4"></path>
+                </svg>
+              </summary>
+              <div
+                class="absolute left-0 top-full z-30 mt-2 w-56 max-w-[calc(100vw-3rem)] rounded-xl border border-white/15 bg-neutral-900 p-4 text-xs shadow-xl sm:right-0 sm:left-auto"
+              >
+                <p class="font-medium text-white">Período del reporte</p>
+                <p class="mt-2 leading-5 text-neutral-300">
+                  1–30 de septiembre de 2026.
+                </p>
+                <p class="mt-2 leading-5 text-neutral-400">
+                  Datos de ejemplo de seis campañas finalizadas.
+                </p>
+              </div>
+            </details>
           </div>
         </header>
         <!-- Bloque superior: cuatro KPIs. -->
         <section
           id="resumen"
           aria-label="Indicadores principales"
-          class="scroll-mt-5"
+          class="scroll-mt-5 rounded-2xl target:ring-1 target:ring-white/25"
         >
           <div
             class="grid grid-cols-1 gap-2.5 min-[360px]:grid-cols-2 lg:grid-cols-4"
           >
             <article
-              class="min-w-0 rounded-2xl border border-white/[0.03] bg-[#171717] p-3"
+              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -256,9 +308,34 @@
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 15 % de 30.000 € vendidos
               </p>
+              <details name="kpi-help" class="group mt-auto pt-2">
+                <summary
+                  aria-label="Cálculo de Comisiones"
+                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                >
+                  <span class="group-open:hidden">Ver cálculo</span
+                  ><span class="hidden group-open:inline">Cerrar cálculo</span
+                  ><svg
+                    aria-hidden="true"
+                    class="size-3 shrink-0 group-open:rotate-180"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="m4 6 4 4 4-4"></path>
+                  </svg>
+                </summary>
+                <p
+                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
+                >
+                  200 × 7,50 € + 100 × 18 € + 100 × 12 € = 4.500 €. Comisión del
+                  15 % sobre cada producto.
+                </p>
+              </details>
             </article>
             <article
-              class="min-w-0 rounded-2xl border border-white/[0.03] bg-[#171717] p-3"
+              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -327,9 +404,33 @@
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 3 productos promocionados
               </p>
+              <details name="kpi-help" class="group mt-auto pt-2">
+                <summary
+                  aria-label="Cálculo de Ventas totales"
+                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                >
+                  <span class="group-open:hidden">Ver cálculo</span
+                  ><span class="hidden group-open:inline">Cerrar cálculo</span
+                  ><svg
+                    aria-hidden="true"
+                    class="size-3 shrink-0 group-open:rotate-180"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="m4 6 4 4 4-4"></path>
+                  </svg>
+                </summary>
+                <p
+                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
+                >
+                  200 unidades de A + 100 de B + 100 de C = 400 ventas.
+                </p>
+              </details>
             </article>
             <article
-              class="min-w-0 rounded-2xl border border-white/[0.03] bg-[#171717] p-3"
+              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -398,9 +499,33 @@
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 400 ventas / 200.000 de alcance
               </p>
+              <details name="kpi-help" class="group mt-auto pt-2">
+                <summary
+                  aria-label="Cálculo de Conversión"
+                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                >
+                  <span class="group-open:hidden">Ver cálculo</span
+                  ><span class="hidden group-open:inline">Cerrar cálculo</span
+                  ><svg
+                    aria-hidden="true"
+                    class="size-3 shrink-0 group-open:rotate-180"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="m4 6 4 4 4-4"></path>
+                  </svg>
+                </summary>
+                <p
+                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
+                >
+                  400 ventas ÷ 200.000 de alcance × 100 = 0,20 %.
+                </p>
+              </details>
             </article>
             <article
-              class="min-w-0 rounded-2xl border border-white/[0.03] bg-[#171717] p-3"
+              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -472,6 +597,30 @@
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 13.000 interacciones
               </p>
+              <details name="kpi-help" class="group mt-auto pt-2">
+                <summary
+                  aria-label="Cálculo de Engagement"
+                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                >
+                  <span class="group-open:hidden">Ver cálculo</span
+                  ><span class="hidden group-open:inline">Cerrar cálculo</span
+                  ><svg
+                    aria-hidden="true"
+                    class="size-3 shrink-0 group-open:rotate-180"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="m4 6 4 4 4-4"></path>
+                  </svg>
+                </summary>
+                <p
+                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
+                >
+                  13.000 interacciones ÷ 200.000 de alcance × 100 = 6,5 %.
+                </p>
+              </details>
             </article>
           </div>
         </section>
@@ -479,7 +628,7 @@
         <section
           id="rendimiento"
           aria-labelledby="titulo-rendimiento"
-          class="mt-3 scroll-mt-5"
+          class="mt-3 scroll-mt-5 target:ring-1 target:ring-white/25"
         >
           <h2 id="titulo-rendimiento" class="sr-only">
             Rendimiento por producto, plataforma y comunidad
@@ -763,7 +912,7 @@
                 </dl>
                 <a
                   href="#campanas"
-                  class="mt-auto flex min-h-10 w-fit items-center gap-5 rounded-xl bg-white px-4 py-2 text-xs font-medium text-black hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  class="mt-auto flex min-h-10 w-fit items-center gap-5 rounded-xl bg-white px-4 py-2 text-xs font-medium text-black hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                   >Ver las campañas
                   <svg
                     aria-hidden="true"
@@ -788,7 +937,7 @@
           <section
             id="campanas"
             aria-labelledby="titulo-campanas"
-            class="scroll-mt-6 overflow-hidden rounded-3xl border border-white/5 bg-[#171717]"
+            class="[&:has(#filter-instagram:checked)_tbody_tr:not([data-platform=instagram])]:hidden [&:has(#filter-tiktok:checked)_tbody_tr:not([data-platform=tiktok])]:hidden [&:has(#filter-youtube:checked)_tbody_tr:not([data-platform=youtube])]:hidden scroll-mt-6 overflow-hidden rounded-3xl border border-white/5 bg-[#171717] target:ring-1 target:ring-white/25"
           >
             <div
               class="flex flex-wrap items-center justify-between gap-2 px-4 pt-5 sm:px-4"
@@ -806,10 +955,95 @@
               </div>
               <span
                 class="rounded-md bg-white/5 px-2 py-1 text-xs text-neutral-400"
-                >6 finalizadas</span
+                ><span
+                  class="[section:has(#filter-instagram:checked)_&]:hidden [section:has(#filter-tiktok:checked)_&]:hidden [section:has(#filter-youtube:checked)_&]:hidden"
+                  >6 finalizadas</span
+                ><span
+                  class="hidden [section:has(#filter-instagram:checked)_&]:inline [section:has(#filter-tiktok:checked)_&]:inline [section:has(#filter-youtube:checked)_&]:inline"
+                  >2 finalizadas</span
+                ></span
               >
             </div>
-            <table class="mt-5 w-full table-fixed md:table-auto">
+            <fieldset class="mt-4 px-4">
+              <legend class="mb-2 text-[0.65rem] font-medium text-neutral-300">
+                Filtrar campañas por plataforma
+              </legend>
+              <div class="flex flex-wrap gap-1.5">
+                <div>
+                  <input
+                    class="peer sr-only"
+                    type="radio"
+                    id="filter-all"
+                    name="platform"
+                    value="all"
+                    checked
+                 ><label
+                    for="filter-all"
+                    class="flex min-h-11 cursor-pointer items-center gap-1.5 rounded-lg border border-white/10 px-2.5 text-[0.65rem] font-medium text-neutral-300 hover:border-white/25 hover:bg-white/5 peer-checked:border-white peer-checked:bg-white peer-checked:hover:bg-neutral-200 peer-checked:hover:text-neutral-950 peer-checked:hover:border-neutral-200 peer-checked:text-neutral-950 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-white peer-checked:[&>span]:border-neutral-950 peer-checked:[&>span]:bg-neutral-950 sm:min-h-9 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                    ><span
+                      aria-hidden="true"
+                      class="size-1.5 rounded-full border border-neutral-500"
+                    ></span
+                    >Todas</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="peer sr-only"
+                    type="radio"
+                    id="filter-instagram"
+                    name="platform"
+                    value="instagram"
+                 ><label
+                    for="filter-instagram"
+                    class="flex min-h-11 cursor-pointer items-center gap-1.5 rounded-lg border border-white/10 px-2.5 text-[0.65rem] font-medium text-neutral-300 hover:border-white/25 hover:bg-white/5 peer-checked:border-white peer-checked:bg-white peer-checked:hover:bg-neutral-200 peer-checked:hover:text-neutral-950 peer-checked:hover:border-neutral-200 peer-checked:text-neutral-950 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-white peer-checked:[&>span]:border-neutral-950 peer-checked:[&>span]:bg-neutral-950 sm:min-h-9 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                    ><span
+                      aria-hidden="true"
+                      class="size-1.5 rounded-full border border-neutral-500"
+                    ></span
+                    >Instagram</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="peer sr-only"
+                    type="radio"
+                    id="filter-tiktok"
+                    name="platform"
+                    value="tiktok"
+                 ><label
+                    for="filter-tiktok"
+                    class="flex min-h-11 cursor-pointer items-center gap-1.5 rounded-lg border border-white/10 px-2.5 text-[0.65rem] font-medium text-neutral-300 hover:border-white/25 hover:bg-white/5 peer-checked:border-white peer-checked:bg-white peer-checked:hover:bg-neutral-200 peer-checked:hover:text-neutral-950 peer-checked:hover:border-neutral-200 peer-checked:text-neutral-950 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-white peer-checked:[&>span]:border-neutral-950 peer-checked:[&>span]:bg-neutral-950 sm:min-h-9 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                    ><span
+                      aria-hidden="true"
+                      class="size-1.5 rounded-full border border-neutral-500"
+                    ></span
+                    >TikTok</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="peer sr-only"
+                    type="radio"
+                    id="filter-youtube"
+                    name="platform"
+                    value="youtube"
+                 ><label
+                    for="filter-youtube"
+                    class="flex min-h-11 cursor-pointer items-center gap-1.5 rounded-lg border border-white/10 px-2.5 text-[0.65rem] font-medium text-neutral-300 hover:border-white/25 hover:bg-white/5 peer-checked:border-white peer-checked:bg-white peer-checked:hover:bg-neutral-200 peer-checked:hover:text-neutral-950 peer-checked:hover:border-neutral-200 peer-checked:text-neutral-950 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-white peer-checked:[&>span]:border-neutral-950 peer-checked:[&>span]:bg-neutral-950 sm:min-h-9 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+                    ><span
+                      aria-hidden="true"
+                      class="size-1.5 rounded-full border border-neutral-500"
+                    ></span
+                    >YouTube</label
+                  >
+                </div>
+              </div>
+              <p class="mt-2 text-[0.65rem] leading-4 text-neutral-400">
+                Filtra esta tabla. Los indicadores incluyen todas las redes.
+              </p>
+            </fieldset>
+            <table class="mt-3 w-full table-fixed md:table-auto">
               <caption class="sr-only">
                 Resultados de las seis campañas de septiembre de 2026. Comisión
                 del 15 % sobre las ventas. Retorno igual a comisiones divididas
@@ -858,13 +1092,26 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="border-t border-white/5 align-top hover:bg-white/5">
+                <tr
+                  data-platform="instagram"
+                  class="border-t border-white/5 align-top hover:bg-white/5 has-[details[open]]:bg-white/[0.06] has-[details[open]]:shadow-[inset_2px_0_0_rgba(255,255,255,0.45)]"
+                >
                   <td class="px-4 py-3 text-left sm:px-4">
-                    <details>
+                    <details class="group">
                       <summary
-                        class="cursor-pointer text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
+                        class="text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white flex min-h-11 cursor-pointer list-none items-center sm:min-h-9 justify-between gap-2 rounded-md px-1 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                       >
-                        Reel · favoritos del mes
+                        <span>Reel · favoritos del mes</span
+                        ><svg
+                          aria-hidden="true"
+                          class="size-3 shrink-0 group-open:rotate-180"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        >
+                          <path d="m4 6 4 4 4-4"></path>
+                        </svg>
                       </summary>
                       <dl
                         class="mt-3 space-y-1 text-xs font-normal leading-6 text-neutral-400"
@@ -904,38 +1151,51 @@
                     </p>
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell pt-6 sm:pt-5"
                   >
                     30.000
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell pt-6 sm:pt-5"
                   >
                     80
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     250 €
                   </td>
                   <td
-                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4"
+                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4 pt-6 sm:pt-5"
                   >
                     600 €
                   </td>
                   <td
-                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell"
+                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     2,40×
                   </td>
                 </tr>
-                <tr class="border-t border-white/5 align-top hover:bg-white/5">
+                <tr
+                  data-platform="tiktok"
+                  class="border-t border-white/5 align-top hover:bg-white/5 has-[details[open]]:bg-white/[0.06] has-[details[open]]:shadow-[inset_2px_0_0_rgba(255,255,255,0.45)]"
+                >
                   <td class="px-4 py-3 text-left sm:px-4">
-                    <details>
+                    <details class="group">
                       <summary
-                        class="cursor-pointer text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
+                        class="text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white flex min-h-11 cursor-pointer list-none items-center sm:min-h-9 justify-between gap-2 rounded-md px-1 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                       >
-                        Vídeo · básicos diarios
+                        <span>Vídeo · básicos diarios</span
+                        ><svg
+                          aria-hidden="true"
+                          class="size-3 shrink-0 group-open:rotate-180"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        >
+                          <path d="m4 6 4 4 4-4"></path>
+                        </svg>
                       </summary>
                       <dl
                         class="mt-3 space-y-1 text-xs font-normal leading-6 text-neutral-400"
@@ -975,38 +1235,51 @@
                     </p>
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell pt-6 sm:pt-5"
                   >
                     50.000
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell pt-6 sm:pt-5"
                   >
                     120
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     350 €
                   </td>
                   <td
-                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4"
+                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4 pt-6 sm:pt-5"
                   >
                     900 €
                   </td>
                   <td
-                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell"
+                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     2,57×
                   </td>
                 </tr>
-                <tr class="border-t border-white/5 align-top hover:bg-white/5">
+                <tr
+                  data-platform="instagram"
+                  class="border-t border-white/5 align-top hover:bg-white/5 has-[details[open]]:bg-white/[0.06] has-[details[open]]:shadow-[inset_2px_0_0_rgba(255,255,255,0.45)]"
+                >
                   <td class="px-4 py-3 text-left sm:px-4">
-                    <details>
+                    <details class="group">
                       <summary
-                        class="cursor-pointer text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
+                        class="text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white flex min-h-11 cursor-pointer list-none items-center sm:min-h-9 justify-between gap-2 rounded-md px-1 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                       >
-                        Stories · selección premium
+                        <span>Stories · selección premium</span
+                        ><svg
+                          aria-hidden="true"
+                          class="size-3 shrink-0 group-open:rotate-180"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        >
+                          <path d="m4 6 4 4 4-4"></path>
+                        </svg>
                       </summary>
                       <dl
                         class="mt-3 space-y-1 text-xs font-normal leading-6 text-neutral-400"
@@ -1046,38 +1319,51 @@
                     </p>
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell pt-6 sm:pt-5"
                   >
                     30.000
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell pt-6 sm:pt-5"
                   >
                     40
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     200 €
                   </td>
                   <td
-                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4"
+                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4 pt-6 sm:pt-5"
                   >
                     720 €
                   </td>
                   <td
-                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell"
+                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     3,60×
                   </td>
                 </tr>
-                <tr class="border-t border-white/5 align-top hover:bg-white/5">
+                <tr
+                  data-platform="youtube"
+                  class="border-t border-white/5 align-top hover:bg-white/5 has-[details[open]]:bg-white/[0.06] has-[details[open]]:shadow-[inset_2px_0_0_rgba(255,255,255,0.45)]"
+                >
                   <td class="px-4 py-3 text-left sm:px-4">
-                    <details>
+                    <details class="group">
                       <summary
-                        class="cursor-pointer text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
+                        class="text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white flex min-h-11 cursor-pointer list-none items-center sm:min-h-9 justify-between gap-2 rounded-md px-1 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                       >
-                        Review · a fondo
+                        <span>Review · a fondo</span
+                        ><svg
+                          aria-hidden="true"
+                          class="size-3 shrink-0 group-open:rotate-180"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        >
+                          <path d="m4 6 4 4 4-4"></path>
+                        </svg>
                       </summary>
                       <dl
                         class="mt-3 space-y-1 text-xs font-normal leading-6 text-neutral-400"
@@ -1117,38 +1403,51 @@
                     </p>
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell pt-6 sm:pt-5"
                   >
                     20.000
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell pt-6 sm:pt-5"
                   >
                     60
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     400 €
                   </td>
                   <td
-                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4"
+                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4 pt-6 sm:pt-5"
                   >
                     1.080 €
                   </td>
                   <td
-                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell"
+                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     2,70×
                   </td>
                 </tr>
-                <tr class="border-t border-white/5 align-top hover:bg-white/5">
+                <tr
+                  data-platform="tiktok"
+                  class="border-t border-white/5 align-top hover:bg-white/5 has-[details[open]]:bg-white/[0.06] has-[details[open]]:shadow-[inset_2px_0_0_rgba(255,255,255,0.45)]"
+                >
                   <td class="px-4 py-3 text-left sm:px-4">
-                    <details>
+                    <details class="group">
                       <summary
-                        class="cursor-pointer text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
+                        class="text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white flex min-h-11 cursor-pointer list-none items-center sm:min-h-9 justify-between gap-2 rounded-md px-1 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                       >
-                        Vídeo · descubrimientos
+                        <span>Vídeo · descubrimientos</span
+                        ><svg
+                          aria-hidden="true"
+                          class="size-3 shrink-0 group-open:rotate-180"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        >
+                          <path d="m4 6 4 4 4-4"></path>
+                        </svg>
                       </summary>
                       <dl
                         class="mt-3 space-y-1 text-xs font-normal leading-6 text-neutral-400"
@@ -1188,38 +1487,51 @@
                     </p>
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell pt-6 sm:pt-5"
                   >
                     50.000
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell pt-6 sm:pt-5"
                   >
                     70
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     200 €
                   </td>
                   <td
-                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4"
+                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4 pt-6 sm:pt-5"
                   >
                     840 €
                   </td>
                   <td
-                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell"
+                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     4,20×
                   </td>
                 </tr>
-                <tr class="border-t border-white/5 align-top hover:bg-white/5">
+                <tr
+                  data-platform="youtube"
+                  class="border-t border-white/5 align-top hover:bg-white/5 has-[details[open]]:bg-white/[0.06] has-[details[open]]:shadow-[inset_2px_0_0_rgba(255,255,255,0.45)]"
+                >
                   <td class="px-4 py-3 text-left sm:px-4">
-                    <details>
+                    <details class="group">
                       <summary
-                        class="cursor-pointer text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
+                        class="text-xs font-medium text-neutral-100 hover:text-white focus-visible:outline-2 focus-visible:outline-white flex min-h-11 cursor-pointer list-none items-center sm:min-h-9 justify-between gap-2 rounded-md px-1 motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
                       >
-                        Tutorial · mi rutina
+                        <span>Tutorial · mi rutina</span
+                        ><svg
+                          aria-hidden="true"
+                          class="size-3 shrink-0 group-open:rotate-180"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        >
+                          <path d="m4 6 4 4 4-4"></path>
+                        </svg>
                       </summary>
                       <dl
                         class="mt-3 space-y-1 text-xs font-normal leading-6 text-neutral-400"
@@ -1259,37 +1571,40 @@
                     </p>
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums xl:table-cell pt-6 sm:pt-5"
                   >
                     20.000
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums sm:table-cell pt-6 sm:pt-5"
                   >
                     30
                   </td>
                   <td
-                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell"
+                    class="hidden px-4 py-3 text-right text-xs tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     100 €
                   </td>
                   <td
-                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4"
+                    class="px-4 py-3 text-right text-xs font-medium whitespace-nowrap tabular-nums sm:px-4 pt-6 sm:pt-5"
                   >
                     360 €
                   </td>
                   <td
-                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell"
+                    class="hidden px-3 py-3 text-right text-xs font-medium text-emerald-400 tabular-nums md:table-cell pt-6 sm:pt-5"
                   >
                     3,60×
                   </td>
                 </tr>
               </tbody>
               <tfoot
-                class="border-t border-white/5 bg-[#111111] text-xs font-medium tabular-nums"
+                class="border-t border-white/10 bg-[#111111] text-xs font-medium tabular-nums"
               >
-                <tr>
-                  <th scope="row" class="px-4 py-3 text-left sm:px-4">Total</th>
+                <tr
+                  data-total="all"
+                  class="[section:has(#filter-instagram:checked)_&]:hidden [section:has(#filter-tiktok:checked)_&]:hidden [section:has(#filter-youtube:checked)_&]:hidden"
+                >
+                  <th scope="row" class="px-4 py-3 text-left">Total</th>
                   <td class="hidden px-4 py-3 text-right xl:table-cell">
                     200.000
                   </td>
@@ -1297,7 +1612,7 @@
                   <td class="hidden px-4 py-3 text-right md:table-cell">
                     1.500 €
                   </td>
-                  <td class="px-4 py-3 text-right whitespace-nowrap sm:px-4">
+                  <td class="px-4 py-3 text-right whitespace-nowrap">
                     4.500 €
                   </td>
                   <td
@@ -1306,13 +1621,78 @@
                     3,00×
                   </td>
                 </tr>
+                <tr
+                  data-total="instagram"
+                  class="hidden [section:has(#filter-instagram:checked)_&]:table-row"
+                >
+                  <th scope="row" class="px-4 py-3 text-left">
+                    Total Instagram
+                  </th>
+                  <td class="hidden px-4 py-3 text-right xl:table-cell">
+                    60.000
+                  </td>
+                  <td class="hidden px-4 py-3 text-right sm:table-cell">120</td>
+                  <td class="hidden px-4 py-3 text-right md:table-cell">
+                    450 €
+                  </td>
+                  <td class="px-4 py-3 text-right whitespace-nowrap">
+                    1.320 €
+                  </td>
+                  <td
+                    class="hidden px-3 py-3 text-right text-emerald-400 md:table-cell"
+                  >
+                    2,93×
+                  </td>
+                </tr>
+                <tr
+                  data-total="tiktok"
+                  class="hidden [section:has(#filter-tiktok:checked)_&]:table-row"
+                >
+                  <th scope="row" class="px-4 py-3 text-left">Total TikTok</th>
+                  <td class="hidden px-4 py-3 text-right xl:table-cell">
+                    100.000
+                  </td>
+                  <td class="hidden px-4 py-3 text-right sm:table-cell">190</td>
+                  <td class="hidden px-4 py-3 text-right md:table-cell">
+                    550 €
+                  </td>
+                  <td class="px-4 py-3 text-right whitespace-nowrap">
+                    1.740 €
+                  </td>
+                  <td
+                    class="hidden px-3 py-3 text-right text-emerald-400 md:table-cell"
+                  >
+                    3,16×
+                  </td>
+                </tr>
+                <tr
+                  data-total="youtube"
+                  class="hidden [section:has(#filter-youtube:checked)_&]:table-row"
+                >
+                  <th scope="row" class="px-4 py-3 text-left">Total YouTube</th>
+                  <td class="hidden px-4 py-3 text-right xl:table-cell">
+                    40.000
+                  </td>
+                  <td class="hidden px-4 py-3 text-right sm:table-cell">90</td>
+                  <td class="hidden px-4 py-3 text-right md:table-cell">
+                    500 €
+                  </td>
+                  <td class="px-4 py-3 text-right whitespace-nowrap">
+                    1.440 €
+                  </td>
+                  <td
+                    class="hidden px-3 py-3 text-right text-emerald-400 md:table-cell"
+                  >
+                    2,88×
+                  </td>
+                </tr>
               </tfoot>
             </table>
           </section>
           <section
             id="retorno"
             aria-labelledby="titulo-retorno"
-            class="scroll-mt-5 rounded-3xl border border-white/5 bg-[#171717] p-3"
+            class="scroll-mt-5 rounded-3xl border border-white/5 bg-[#171717] p-3 target:ring-1 target:ring-white/25"
           >
             <h2
               id="titulo-retorno"
@@ -1334,7 +1714,7 @@
                   <circle cx="17" cy="17" r="3"></circle>
                   <path d="M5 19 19 5"></path></svg></span
               >Margen de comisiones
-            </h2>
+            </h2><p class="-mt-1 mb-3 px-1 text-[0.65rem] text-neutral-400">Todas las redes · Septiembre</p>
             <div
               class="relative isolate overflow-hidden rounded-2xl border border-white/5 bg-[#0c0c0c] px-4 pt-7 pb-5"
             >
