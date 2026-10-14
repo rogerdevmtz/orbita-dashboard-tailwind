@@ -46,6 +46,10 @@ Repositorio de entrega: [rogerdevmtz/orbita-dashboard-tailwind](https://github.c
 
 La rama del proyecto es `codex/dashboard-tailwind`. El remoto `origin` apunta al repositorio propio y `template` conserva la plantilla de 4Geeks.
 
+## Diseño
+
+Navegación en azul noche, superficies claras, acentos índigo para ingresos y verde para engagement. Los tres KPIs comparten patrones de tipografía, espaciado e iconos SVG decorativos integrados en el HTML, sin librerías adicionales. En móvil, las comisiones ocupan una fila y los otros dos indicadores comparten la siguiente para reducir el scroll. Las comparativas por plataforma se ordenan por comisiones; las barras de engagement muestran proporciones respecto al mayor valor del período.
+
 ## Verificación de la rúbrica
 
 | Criterio | Implementación | Comprobación |

@@ -8,73 +8,132 @@
       content="Dashboard de ejemplo para analizar ventas, comisiones y campañas de una creadora de contenido."
    >
     <title>Órbita — Dashboard de creadora</title>
-    <meta name="theme-color" content="#fafaf9">
+    <meta name="theme-color" content="#f6f7f9">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="icon" href="data:,">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body
-    class="bg-stone-50 font-sans text-slate-900 antialiased selection:bg-indigo-200"
+    class="bg-[#f6f7f9] font-sans text-slate-900 antialiased selection:bg-indigo-200"
   >
     <a
       href="#contenido"
       class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-4 focus:ring-2 focus:ring-indigo-600"
       >Saltar al contenido</a
     >
-    <div class="min-h-screen lg:grid lg:grid-cols-[14rem_minmax(0,1fr)]">
+    <div class="min-h-screen lg:grid lg:grid-cols-[14.5rem_minmax(0,1fr)]">
       <!-- Navegación: cabecera en móvil, columna lateral en escritorio. -->
       <aside
-        class="border-b border-stone-200 bg-white lg:sticky lg:top-0 lg:h-screen lg:border-r lg:border-b-0"
+        class="border-b border-slate-800 bg-slate-950 text-white lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col lg:border-r lg:border-b-0"
       >
-        <div class="flex items-center gap-3 px-5 py-5 lg:px-7 lg:py-8">
+        <div class="flex items-center gap-3 px-5 py-5 lg:px-6 lg:py-8">
           <span
             aria-hidden="true"
-            class="flex size-9 items-center justify-center rounded-xl bg-indigo-600 text-xl font-bold text-white"
+            class="flex size-9 items-center justify-center rounded-xl bg-indigo-500 text-xl font-semibold"
             >ó</span
-          >
-          <span class="text-2xl font-semibold tracking-tight"
-            >órbita<span class="text-indigo-600">.</span></span
+          ><span class="text-2xl font-semibold tracking-tight"
+            >órbita<span class="text-indigo-400">.</span></span
+          ><span
+            class="ml-auto rounded border border-white/15 px-2 py-1 text-xs text-slate-300 lg:hidden"
+            >Mi espacio</span
           >
         </div>
         <p
-          class="hidden px-7 pb-3 text-xs font-medium tracking-widest text-slate-500 lg:block"
+          class="hidden px-6 pb-3 text-xs font-medium tracking-widest text-slate-400 lg:block"
         >
           TU ESPACIO CREADOR
         </p>
         <nav
           aria-label="Navegación principal"
-          class="flex gap-1 px-3 pb-4 text-sm font-medium lg:flex-col lg:px-4"
+          class="flex gap-1 px-3 pb-4 text-sm font-medium lg:flex-col lg:gap-2 lg:px-3"
         >
           <a
             href="#resumen"
-            class="flex min-h-11 flex-1 items-center gap-2 rounded-lg bg-indigo-50 px-2 text-indigo-700 hover:bg-indigo-100 focus-visible:outline-2 focus-visible:outline-indigo-600"
-            ><span aria-hidden="true" class="hidden sm:inline">◫</span>
-            Resumen</a
+            class="flex min-h-11 flex-1 items-center gap-3 rounded-lg bg-white/10 px-2 text-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-indigo-300 lg:px-3"
+            ><span class="hidden sm:inline"
+              ><svg
+                aria-hidden="true"
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                <rect
+                  x="14"
+                  y="14"
+                  width="7"
+                  height="7"
+                  rx="1.5"
+                ></rect></svg></span
+            >Resumen</a
           >
           <a
             href="#rendimiento"
-            class="flex min-h-11 flex-1 items-center gap-2 rounded-lg px-2 text-slate-600 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-indigo-600"
-            ><span aria-hidden="true" class="hidden sm:inline">↗</span>
-            Rendimiento</a
+            class="flex min-h-11 flex-1 items-center gap-3 rounded-lg px-2 text-slate-300 hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-indigo-300 lg:px-3"
+            ><span class="hidden sm:inline"
+              ><svg
+                aria-hidden="true"
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 4v16h16M8 15l4-5 4 2 4-7"></path></svg></span
+            >Rendimiento</a
           >
           <a
             href="#campanas"
-            class="flex min-h-11 flex-1 items-center gap-2 rounded-lg px-2 text-slate-600 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-indigo-600"
-            ><span aria-hidden="true" class="hidden sm:inline">≡</span>
-            Campañas</a
+            class="flex min-h-11 flex-1 items-center gap-3 rounded-lg px-2 text-slate-300 hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-indigo-300 lg:px-3"
+            ><span class="hidden sm:inline"
+              ><svg
+                aria-hidden="true"
+                class="size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 10v5h4l11 4V6L8 10H4ZM8 15l2 6h3l-2-5M22 10v5"
+                ></path></svg></span
+            >Campañas</a
           >
         </nav>
         <div
-          class="absolute right-5 top-6 hidden items-center gap-3 sm:flex lg:inset-x-5 lg:top-auto lg:bottom-7 lg:border-t lg:border-stone-200 lg:pt-5"
+          class="mx-5 mt-8 hidden rounded-xl border border-white/10 p-4 lg:block"
+        >
+          <p class="text-sm font-medium">3 redes. Una visión.</p>
+          <p class="mt-2 text-xs leading-5 text-slate-400">
+            Encuentra lo que funciona y da espacio a tu próxima idea.
+          </p>
+          <div aria-hidden="true" class="mt-5 flex gap-1.5">
+            <span class="h-1.5 w-8 rounded-full bg-indigo-400"></span
+            ><span class="h-1.5 w-8 rounded-full bg-indigo-300"></span
+            ><span class="h-1.5 w-8 rounded-full bg-indigo-200"></span>
+          </div>
+        </div>
+        <div
+          class="mx-5 mt-auto mb-6 hidden items-center gap-3 border-t border-white/10 pt-5 lg:flex"
         >
           <span
             aria-hidden="true"
-            class="flex size-9 items-center justify-center rounded-full bg-orange-100 text-sm font-semibold text-orange-900"
+            class="flex size-9 items-center justify-center rounded-full bg-indigo-200 text-sm font-semibold text-indigo-950"
             >C</span
           >
           <div>
-            <p class="text-sm font-semibold">Mi espacio</p>
-            <p class="text-xs text-slate-500">Creadora de contenido</p>
+            <p class="text-sm font-medium">Mi espacio</p>
+            <p class="mt-0.5 text-xs text-slate-400">Creadora de contenido</p>
           </div>
         </div>
       </aside>
@@ -97,110 +156,159 @@
         <main
           id="contenido"
           tabindex="-1"
-          class="mx-auto max-w-7xl space-y-8 px-4 py-7 sm:px-8 lg:px-10 lg:py-9"
+          class="mx-auto max-w-7xl space-y-8 px-4 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-10"
         >
-          <!-- Bloque superior: los tres indicadores principales. -->
+          <!-- Bloque superior: tres indicadores principales. -->
           <section id="resumen" aria-labelledby="titulo" class="scroll-mt-6">
-            <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+            <div
+              class="mb-6 flex flex-wrap items-end justify-between gap-5 sm:mb-7"
+            >
               <div>
-                <p class="mb-2 text-sm font-medium text-indigo-700">
-                  Cada colaboración cuenta.
+                <p
+                  class="mb-2 text-xs font-semibold tracking-widest text-indigo-700"
+                >
+                  RESUMEN MENSUAL
                 </p>
                 <h1
                   id="titulo"
                   class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
                 >
-                  Tu impacto, en un vistazo
+                  Más claridad. Más impacto.
                 </h1>
-                <p class="mt-3 max-w-xl text-sm leading-6 text-slate-500">
-                  Tus redes, tus productos y tus resultados. Todo en el mismo
-                  lugar.
+                <p class="mt-3 max-w-xl text-sm leading-6 text-slate-600">
+                  Así han funcionado tus colaboraciones este mes.
                 </p>
               </div>
               <div
-                class="rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm text-slate-600"
+                class="flex items-center gap-2.5 rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-xs font-medium text-slate-600 sm:text-sm"
               >
-                <span aria-hidden="true" class="mr-2">▦</span> 1–30 septiembre
-                2026
+                <svg
+                  aria-hidden="true"
+                  class="size-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="5" width="18" height="16" rx="3"></rect>
+                  <path d="M7 3v4M17 3v4M3 11h18M8 15h2M14 15h2"></path></svg
+                ><span>1–30 septiembre 2026</span>
               </div>
             </div>
-            <div class="grid gap-4 md:grid-cols-3">
+            <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
               <article
-                class="rounded-xl border border-indigo-600 bg-indigo-600 p-5 text-white sm:p-6"
+                class="col-span-2 rounded-2xl border border-indigo-600 bg-indigo-600 p-5 text-white shadow-sm shadow-indigo-950/10 sm:p-6 md:col-span-1"
               >
-                <div class="flex items-center justify-between">
+                <div class="flex min-h-10 items-center justify-between gap-2">
                   <h2 class="text-sm font-medium text-indigo-100">
                     Comisiones generadas
                   </h2>
                   <span
-                    aria-hidden="true"
-                    class="flex size-8 items-center justify-center rounded-lg bg-white/15"
-                    >€</span
-                  >
+                    class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-white/15"
+                    ><svg
+                      aria-hidden="true"
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <path d="M15 8a4 4 0 1 0 0 8M6 11h7M6 14h7"></path></svg
+                  ></span>
                 </div>
                 <p
-                  class="mt-5 text-4xl font-semibold tracking-tight tabular-nums"
+                  class="mt-3 text-4xl font-semibold tracking-tight tabular-nums sm:mt-4 sm:text-5xl"
                 >
-                  4.500 <span class="text-2xl font-normal">€</span>
+                  4.500<span class="ml-1.5 text-2xl font-normal text-indigo-200"
+                    >€</span
+                  >
                 </p>
                 <p
-                  class="mt-4 border-t border-white/20 pt-4 text-xs text-indigo-100"
+                  class="mt-4 border-t border-white/20 pt-3 text-xs leading-5 text-indigo-100"
                 >
                   El 15 % de 30.000 € en ventas
                 </p>
               </article>
               <article
-                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+                class="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm shadow-slate-200/40 sm:p-6"
               >
-                <div class="flex items-center justify-between">
-                  <h2 class="text-sm font-medium text-slate-600">
+                <div class="flex min-h-10 items-center justify-between gap-2">
+                  <h2 class="text-xs font-medium text-slate-600 sm:text-sm">
                     Ventas totales
                   </h2>
                   <span
-                    aria-hidden="true"
-                    class="flex size-8 items-center justify-center rounded-lg bg-stone-100 text-slate-500"
-                    >↗</span
-                  >
+                    class="hidden size-9 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 sm:flex"
+                    ><svg
+                      aria-hidden="true"
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M5 8h14l1 13H4L5 8ZM8 8V6a4 4 0 0 1 8 0v2"
+                      ></path></svg
+                  ></span>
                 </div>
                 <p
-                  class="mt-5 text-4xl font-semibold tracking-tight tabular-nums"
+                  class="mt-3 text-3xl font-semibold tracking-tight tabular-nums sm:mt-4 sm:text-5xl"
                 >
                   400
                 </p>
                 <p
-                  class="mt-4 border-t border-stone-100 pt-4 text-xs text-slate-500"
+                  class="mt-4 border-t border-stone-100 pt-3 text-xs leading-5 text-slate-500"
                 >
-                  3 productos · 6 campañas finalizadas
+                  3 productos · 6 campañas
                 </p>
               </article>
               <article
-                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+                class="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm shadow-slate-200/40 sm:p-6"
               >
-                <div class="flex items-center justify-between">
-                  <h2 class="text-sm font-medium text-slate-600">
+                <div class="flex min-h-10 items-center justify-between gap-2">
+                  <h2 class="text-xs font-medium text-slate-600 sm:text-sm">
                     Tasa de conversión
                   </h2>
                   <span
-                    aria-hidden="true"
-                    class="flex size-8 items-center justify-center rounded-lg bg-stone-100 text-slate-500"
-                    >%</span
-                  >
+                    class="hidden size-9 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700 sm:flex"
+                    ><svg
+                      aria-hidden="true"
+                      class="size-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <circle cx="12" cy="12" r="5"></circle>
+                      <circle cx="12" cy="12" r="1"></circle></svg
+                  ></span>
                 </div>
                 <p
-                  class="mt-5 text-4xl font-semibold tracking-tight tabular-nums"
+                  class="mt-3 text-3xl font-semibold tracking-tight tabular-nums sm:mt-4 sm:text-5xl"
                 >
-                  0,20
-                  <span class="text-2xl font-normal text-slate-500">%</span>
+                  0,20<span
+                    class="ml-1 text-lg font-normal text-slate-500 sm:text-2xl"
+                    >%</span
+                  >
                 </p>
                 <p
-                  class="mt-4 border-t border-stone-100 pt-4 text-xs text-slate-500"
+                  class="mt-4 border-t border-stone-100 pt-3 text-xs leading-5 text-slate-500"
                 >
-                  400 ventas sobre un alcance de 200.000
+                  Alcance: 200.000
                 </p>
               </article>
             </div>
           </section>
-
           <!-- Bloque intermedio: tres factores que explican el resultado. -->
           <section
             id="rendimiento"
@@ -212,15 +320,15 @@
                 id="titulo-rendimiento"
                 class="text-lg font-semibold tracking-tight"
               >
-                Qué está impulsando tus resultados
+                El pulso de tus colaboraciones
               </h2>
               <span class="text-xs text-slate-500"
-                >Comparativa del período</span
+                >Plataformas · Productos · Comunidad</span
               >
             </div>
             <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               <article
-                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+                class="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm shadow-slate-200/40 sm:p-6"
               >
                 <h3 class="font-semibold">Comisiones por plataforma</h3>
                 <p class="mt-1 text-xs text-slate-500">
@@ -228,13 +336,43 @@
                 </p>
                 <ul class="mt-6 space-y-5">
                   <li>
-                    <div class="mb-2 flex justify-between text-sm">
-                      <span>YouTube</span
+                    <div
+                      class="mb-2.5 flex items-center justify-between gap-2 text-sm"
+                    >
+                      <span class="flex items-center gap-2"
+                        ><span
+                          aria-hidden="true"
+                          class="flex size-7 items-center justify-center rounded-lg bg-slate-900 text-xs font-semibold text-white"
+                          >T</span
+                        >TikTok
+                        <span
+                          class="rounded bg-emerald-50 px-1.5 py-0.5 text-xs text-emerald-800"
+                          >Líder</span
+                        ></span
+                      ><span class="font-semibold tabular-nums">1.740 €</span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="h-2 rounded-full bg-slate-100"
+                    >
+                      <div class="h-2 w-full rounded-full bg-indigo-600"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      class="mb-2.5 flex items-center justify-between gap-2 text-sm"
+                    >
+                      <span class="flex items-center gap-2"
+                        ><span
+                          aria-hidden="true"
+                          class="flex size-7 items-center justify-center rounded-lg bg-red-50 text-xs font-semibold text-red-700"
+                          >Y</span
+                        >YouTube</span
                       ><span class="font-semibold tabular-nums">1.440 €</span>
                     </div>
                     <div
                       aria-hidden="true"
-                      class="h-2 rounded-full bg-stone-100"
+                      class="h-2 rounded-full bg-slate-100"
                     >
                       <div
                         class="h-2 w-[82.8%] rounded-full bg-indigo-400"
@@ -242,29 +380,20 @@
                     </div>
                   </li>
                   <li>
-                    <div class="mb-2 flex justify-between text-sm">
-                      <span
-                        >TikTok
-                        <span class="ml-1 text-xs text-emerald-700"
-                          >Líder</span
-                        ></span
-                      ><span class="font-semibold tabular-nums">1.740 €</span>
-                    </div>
                     <div
-                      aria-hidden="true"
-                      class="h-2 rounded-full bg-stone-100"
+                      class="mb-2.5 flex items-center justify-between gap-2 text-sm"
                     >
-                      <div class="h-2 w-full rounded-full bg-indigo-600"></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="mb-2 flex justify-between text-sm">
-                      <span>Instagram</span
+                      <span class="flex items-center gap-2"
+                        ><span
+                          aria-hidden="true"
+                          class="flex size-7 items-center justify-center rounded-lg bg-fuchsia-50 text-xs font-semibold text-fuchsia-700"
+                          >I</span
+                        >Instagram</span
                       ><span class="font-semibold tabular-nums">1.320 €</span>
                     </div>
                     <div
                       aria-hidden="true"
-                      class="h-2 rounded-full bg-stone-100"
+                      class="h-2 rounded-full bg-slate-100"
                     >
                       <div
                         class="h-2 w-[75.9%] rounded-full bg-indigo-300"
@@ -282,7 +411,7 @@
               </article>
 
               <article
-                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+                class="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm shadow-slate-200/40 sm:p-6"
               >
                 <h3 class="font-semibold">Productos que más aportan</h3>
                 <p class="mt-1 text-xs text-slate-500">
@@ -346,7 +475,7 @@
               </article>
 
               <article
-                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6 md:col-span-2 xl:col-span-1"
+                class="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm shadow-slate-200/40 sm:p-6 md:col-span-2 xl:col-span-1"
               >
                 <h3 class="font-semibold">Conexión con tu comunidad</h3>
                 <p class="mt-1 text-xs text-slate-500">
@@ -358,20 +487,7 @@
                   </p>
                   <span class="text-xs text-slate-500">global</span>
                 </div>
-                <dl class="mt-4 space-y-3 text-sm">
-                  <div class="flex justify-between">
-                    <dt>TikTok</dt>
-                    <dd class="font-semibold tabular-nums">8,0 %</dd>
-                  </div>
-                  <div class="flex justify-between">
-                    <dt>Instagram</dt>
-                    <dd class="font-semibold tabular-nums">5,0 %</dd>
-                  </div>
-                  <div class="flex justify-between">
-                    <dt>YouTube</dt>
-                    <dd class="font-semibold tabular-nums">5,0 %</dd>
-                  </div>
-                </dl>
+                <dl class="mt-5 space-y-4 text-sm"><div class="grid grid-cols-2 gap-y-2"><dt>TikTok</dt><dd class="text-right font-semibold tabular-nums">8,0 %</dd><div aria-hidden="true" class="col-span-2 h-1.5 rounded-full bg-slate-100"><div class="h-1.5 w-full rounded-full bg-teal-600"></div></div></div><div class="grid grid-cols-2 gap-y-2"><dt>Instagram</dt><dd class="text-right font-semibold tabular-nums">5,0 %</dd><div aria-hidden="true" class="col-span-2 h-1.5 rounded-full bg-slate-100"><div class="h-1.5 w-[62.5%] rounded-full bg-teal-400"></div></div></div><div class="grid grid-cols-2 gap-y-2"><dt>YouTube</dt><dd class="text-right font-semibold tabular-nums">5,0 %</dd><div aria-hidden="true" class="col-span-2 h-1.5 rounded-full bg-slate-100"><div class="h-1.5 w-[62.5%] rounded-full bg-teal-400"></div></div></div></dl>
                 <p
                   class="mt-5 border-t border-stone-100 pt-4 text-xs leading-5 text-slate-500"
                 >
@@ -388,7 +504,7 @@
           <section
             id="campanas"
             aria-labelledby="titulo-campanas"
-            class="scroll-mt-6 overflow-hidden rounded-xl border border-stone-200 bg-white"
+            class="scroll-mt-6 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm shadow-slate-200/40"
           >
             <div
               class="flex flex-wrap items-center justify-between gap-2 px-4 pt-5 sm:px-6"
@@ -459,7 +575,7 @@
               </thead>
               <tbody>
                 <tr
-                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                  class="border-t border-stone-100 align-top hover:bg-indigo-50/40"
                 >
                   <td class="px-4 py-4 text-left sm:px-6">
                     <details>
@@ -469,7 +585,7 @@
                         Reel · favoritos del mes
                       </summary>
                       <dl
-                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                        class="mt-3 space-y-1 text-xs font-normal leading-6 text-slate-600"
                       >
                         <div>
                           <dt class="inline">Precio:</dt>
@@ -532,7 +648,7 @@
                   </td>
                 </tr>
                 <tr
-                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                  class="border-t border-stone-100 align-top hover:bg-indigo-50/40"
                 >
                   <td class="px-4 py-4 text-left sm:px-6">
                     <details>
@@ -542,7 +658,7 @@
                         Vídeo · básicos diarios
                       </summary>
                       <dl
-                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                        class="mt-3 space-y-1 text-xs font-normal leading-6 text-slate-600"
                       >
                         <div>
                           <dt class="inline">Precio:</dt>
@@ -605,7 +721,7 @@
                   </td>
                 </tr>
                 <tr
-                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                  class="border-t border-stone-100 align-top hover:bg-indigo-50/40"
                 >
                   <td class="px-4 py-4 text-left sm:px-6">
                     <details>
@@ -615,7 +731,7 @@
                         Stories · selección premium
                       </summary>
                       <dl
-                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                        class="mt-3 space-y-1 text-xs font-normal leading-6 text-slate-600"
                       >
                         <div>
                           <dt class="inline">Precio:</dt>
@@ -678,7 +794,7 @@
                   </td>
                 </tr>
                 <tr
-                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                  class="border-t border-stone-100 align-top hover:bg-indigo-50/40"
                 >
                   <td class="px-4 py-4 text-left sm:px-6">
                     <details>
@@ -688,7 +804,7 @@
                         Review · a fondo
                       </summary>
                       <dl
-                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                        class="mt-3 space-y-1 text-xs font-normal leading-6 text-slate-600"
                       >
                         <div>
                           <dt class="inline">Precio:</dt>
@@ -751,7 +867,7 @@
                   </td>
                 </tr>
                 <tr
-                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                  class="border-t border-stone-100 align-top hover:bg-indigo-50/40"
                 >
                   <td class="px-4 py-4 text-left sm:px-6">
                     <details>
@@ -761,7 +877,7 @@
                         Vídeo · descubrimientos
                       </summary>
                       <dl
-                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                        class="mt-3 space-y-1 text-xs font-normal leading-6 text-slate-600"
                       >
                         <div>
                           <dt class="inline">Precio:</dt>
@@ -824,7 +940,7 @@
                   </td>
                 </tr>
                 <tr
-                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                  class="border-t border-stone-100 align-top hover:bg-indigo-50/40"
                 >
                   <td class="px-4 py-4 text-left sm:px-6">
                     <details>
@@ -834,7 +950,7 @@
                         Tutorial · mi rutina
                       </summary>
                       <dl
-                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                        class="mt-3 space-y-1 text-xs font-normal leading-6 text-slate-600"
                       >
                         <div>
                           <dt class="inline">Precio:</dt>
