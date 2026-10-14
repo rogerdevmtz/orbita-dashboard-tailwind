@@ -28,7 +28,7 @@ La referencia proporcionada guía el fondo negro, las tarjetas oscuras redondead
 
 En móvil, los cuatro KPIs forman un grupo horizontal deslizable con ajuste por tarjeta. Se ve parte de la siguiente tarjeta y una pista breve indica cómo descubrir las demás. El grupo recibe foco y admite flechas del teclado; los botones de ayuda también llevan el foco a cada tarjeta. Solo este grupo se desplaza horizontalmente, sin ampliar el ancho de la página. Desde sm se muestran dos columnas y desde lg, cuatro.
 
-La navegación permanece fija: menú inferior en móvil y rail lateral en escritorio. El contenido reserva espacio para evitar que el menú tape la última sección.
+La navegación permanece fija fuera del marco de contenido: menú inferior en móvil y rail lateral de 56 px en escritorio. En escritorio solo se desplaza el main, dentro de un marco ajustado a la altura de la ventana. El contenido reserva espacio para evitar que el menú tape la última sección.
 
 Las mini barras de los KPIs representan valores reales por plataforma, en el orden Instagram, TikTok y YouTube. Cada barra tiene un tooltip con la red, su valor exacto y su contribución al total o los datos usados en el cálculo; admite hover, pulsación y teclado. El gráfico de productos permite cambiar entre comisiones y unidades vendidas, ajustando las alturas y la escala. Las ayudas contextuales explican las fórmulas y los productos sin añadir paneles redundantes. Se abren al pulsar o con Enter y se cierran con Escape o al pulsar fuera. En móvil se centran para no salirse de la pantalla; en escritorio se anclan al control.
 
