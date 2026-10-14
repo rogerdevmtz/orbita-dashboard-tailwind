@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Dashboard de ejemplo para analizar ventas, comisiones y campañas de una creadora de contenido."
+   >
+    <title>Órbita — Dashboard de creadora</title>
+    <meta name="theme-color" content="#fafaf9">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="icon" href="data:,">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-stone-50 font-sans text-slate-900 antialiased selection:bg-indigo-200"
+  >
+    <a
+      href="#contenido"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-4 focus:ring-2 focus:ring-indigo-600"
+      >Saltar al contenido</a
+    >
+    <div class="min-h-screen lg:grid lg:grid-cols-[14rem_minmax(0,1fr)]">
+      <!-- Navegación: cabecera en móvil, columna lateral en escritorio. -->
+      <aside
+        class="border-b border-stone-200 bg-white lg:sticky lg:top-0 lg:h-screen lg:border-r lg:border-b-0"
+      >
+        <div class="flex items-center gap-3 px-5 py-5 lg:px-7 lg:py-8">
+          <span
+            aria-hidden="true"
+            class="flex size-9 items-center justify-center rounded-xl bg-indigo-600 text-xl font-bold text-white"
+            >ó</span
+          >
+          <span class="text-2xl font-semibold tracking-tight"
+            >órbita<span class="text-indigo-600">.</span></span
+          >
+        </div>
+        <p
+          class="hidden px-7 pb-3 text-xs font-medium tracking-widest text-slate-500 lg:block"
+        >
+          TU ESPACIO CREADOR
+        </p>
+        <nav
+          aria-label="Navegación principal"
+          class="flex gap-1 px-3 pb-4 text-sm font-medium lg:flex-col lg:px-4"
+        >
+          <a
+            href="#resumen"
+            class="flex min-h-11 flex-1 items-center gap-2 rounded-lg bg-indigo-50 px-2 text-indigo-700 hover:bg-indigo-100 focus-visible:outline-2 focus-visible:outline-indigo-600"
+            ><span aria-hidden="true" class="hidden sm:inline">◫</span>
+            Resumen</a
+          >
+          <a
+            href="#rendimiento"
+            class="flex min-h-11 flex-1 items-center gap-2 rounded-lg px-2 text-slate-600 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-indigo-600"
+            ><span aria-hidden="true" class="hidden sm:inline">↗</span>
+            Rendimiento</a
+          >
+          <a
+            href="#campanas"
+            class="flex min-h-11 flex-1 items-center gap-2 rounded-lg px-2 text-slate-600 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-indigo-600"
+            ><span aria-hidden="true" class="hidden sm:inline">≡</span>
+            Campañas</a
+          >
+        </nav>
+        <div
+          class="absolute right-5 top-6 hidden items-center gap-3 sm:flex lg:inset-x-5 lg:top-auto lg:bottom-7 lg:border-t lg:border-stone-200 lg:pt-5"
+        >
+          <span
+            aria-hidden="true"
+            class="flex size-9 items-center justify-center rounded-full bg-orange-100 text-sm font-semibold text-orange-900"
+            >C</span
+          >
+          <div>
+            <p class="text-sm font-semibold">Mi espacio</p>
+            <p class="text-xs text-slate-500">Creadora de contenido</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="min-w-0">
+        <header
+          class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 bg-white/80 px-5 py-4 sm:px-8 lg:px-10"
+        >
+          <p class="text-sm text-slate-500">
+            Mi espacio
+            <span aria-hidden="true" class="mx-2 text-stone-300">/</span>
+            <span class="font-medium text-slate-800">Vista general</span>
+          </p>
+          <span
+            class="rounded-md border border-stone-200 px-3 py-1.5 text-xs font-medium text-slate-600"
+            >Datos de ejemplo</span
+          >
+        </header>
+
+        <main
+          id="contenido"
+          tabindex="-1"
+          class="mx-auto max-w-7xl space-y-8 px-4 py-7 sm:px-8 lg:px-10 lg:py-9"
+        >
+          <!-- Bloque superior: los tres indicadores principales. -->
+          <section id="resumen" aria-labelledby="titulo" class="scroll-mt-6">
+            <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p class="mb-2 text-sm font-medium text-indigo-700">
+                  Cada colaboración cuenta.
+                </p>
+                <h1
+                  id="titulo"
+                  class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
+                >
+                  Tu impacto, en un vistazo
+                </h1>
+                <p class="mt-3 max-w-xl text-sm leading-6 text-slate-500">
+                  Tus redes, tus productos y tus resultados. Todo en el mismo
+                  lugar.
+                </p>
+              </div>
+              <div
+                class="rounded-lg border border-stone-200 bg-white px-4 py-3 text-sm text-slate-600"
+              >
+                <span aria-hidden="true" class="mr-2">▦</span> 1–30 septiembre
+                2026
+              </div>
+            </div>
+            <div class="grid gap-4 md:grid-cols-3">
+              <article
+                class="rounded-xl border border-indigo-600 bg-indigo-600 p-5 text-white sm:p-6"
+              >
+                <div class="flex items-center justify-between">
+                  <h2 class="text-sm font-medium text-indigo-100">
+                    Comisiones generadas
+                  </h2>
+                  <span
+                    aria-hidden="true"
+                    class="flex size-8 items-center justify-center rounded-lg bg-white/15"
+                    >€</span
+                  >
+                </div>
+                <p
+                  class="mt-5 text-4xl font-semibold tracking-tight tabular-nums"
+                >
+                  4.500 <span class="text-2xl font-normal">€</span>
+                </p>
+                <p
+                  class="mt-4 border-t border-white/20 pt-4 text-xs text-indigo-100"
+                >
+                  El 15 % de 30.000 € en ventas
+                </p>
+              </article>
+              <article
+                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+              >
+                <div class="flex items-center justify-between">
+                  <h2 class="text-sm font-medium text-slate-600">
+                    Ventas totales
+                  </h2>
+                  <span
+                    aria-hidden="true"
+                    class="flex size-8 items-center justify-center rounded-lg bg-stone-100 text-slate-500"
+                    >↗</span
+                  >
+                </div>
+                <p
+                  class="mt-5 text-4xl font-semibold tracking-tight tabular-nums"
+                >
+                  400
+                </p>
+                <p
+                  class="mt-4 border-t border-stone-100 pt-4 text-xs text-slate-500"
+                >
+                  3 productos · 6 campañas finalizadas
+                </p>
+              </article>
+              <article
+                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+              >
+                <div class="flex items-center justify-between">
+                  <h2 class="text-sm font-medium text-slate-600">
+                    Tasa de conversión
+                  </h2>
+                  <span
+                    aria-hidden="true"
+                    class="flex size-8 items-center justify-center rounded-lg bg-stone-100 text-slate-500"
+                    >%</span
+                  >
+                </div>
+                <p
+                  class="mt-5 text-4xl font-semibold tracking-tight tabular-nums"
+                >
+                  0,20
+                  <span class="text-2xl font-normal text-slate-500">%</span>
+                </p>
+                <p
+                  class="mt-4 border-t border-stone-100 pt-4 text-xs text-slate-500"
+                >
+                  400 ventas sobre un alcance de 200.000
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <!-- Bloque intermedio: tres factores que explican el resultado. -->
+          <section
+            id="rendimiento"
+            aria-labelledby="titulo-rendimiento"
+            class="scroll-mt-6"
+          >
+            <div class="mb-4 flex flex-wrap items-center justify-between gap-2">
+              <h2
+                id="titulo-rendimiento"
+                class="text-lg font-semibold tracking-tight"
+              >
+                Qué está impulsando tus resultados
+              </h2>
+              <span class="text-xs text-slate-500"
+                >Comparativa del período</span
+              >
+            </div>
+            <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <article
+                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+              >
+                <h3 class="font-semibold">Comisiones por plataforma</h3>
+                <p class="mt-1 text-xs text-slate-500">
+                  Dónde se generan tus ingresos
+                </p>
+                <ul class="mt-6 space-y-5">
+                  <li>
+                    <div class="mb-2 flex justify-between text-sm">
+                      <span>YouTube</span
+                      ><span class="font-semibold tabular-nums">1.440 €</span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="h-2 rounded-full bg-stone-100"
+                    >
+                      <div
+                        class="h-2 w-[82.8%] rounded-full bg-indigo-400"
+                      ></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="mb-2 flex justify-between text-sm">
+                      <span
+                        >TikTok
+                        <span class="ml-1 text-xs text-emerald-700"
+                          >Líder</span
+                        ></span
+                      ><span class="font-semibold tabular-nums">1.740 €</span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="h-2 rounded-full bg-stone-100"
+                    >
+                      <div class="h-2 w-full rounded-full bg-indigo-600"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="mb-2 flex justify-between text-sm">
+                      <span>Instagram</span
+                      ><span class="font-semibold tabular-nums">1.320 €</span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="h-2 rounded-full bg-stone-100"
+                    >
+                      <div
+                        class="h-2 w-[75.9%] rounded-full bg-indigo-300"
+                      ></div>
+                    </div>
+                  </li>
+                </ul>
+                <p
+                  class="mt-6 border-t border-stone-100 pt-4 text-xs leading-5 text-slate-500"
+                >
+                  TikTok aporta el
+                  <strong class="font-medium text-slate-800">38,7 %</strong> de
+                  tus comisiones.
+                </p>
+              </article>
+
+              <article
+                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6"
+              >
+                <h3 class="font-semibold">Productos que más aportan</h3>
+                <p class="mt-1 text-xs text-slate-500">
+                  Comisiones y unidades vendidas
+                </p>
+                <ul class="mt-5 divide-y divide-stone-100">
+                  <li class="flex items-center gap-3 py-3">
+                    <span
+                      aria-hidden="true"
+                      class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-indigo-50 font-semibold text-indigo-700"
+                      >B</span
+                    >
+                    <div class="min-w-0 flex-1">
+                      <p class="text-sm font-medium">Producto B</p>
+                      <p class="text-xs text-slate-500">120 € · 100 ventas</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-sm font-semibold tabular-nums">1.800 €</p>
+                      <p class="text-xs text-slate-500">40 % del total</p>
+                    </div>
+                  </li>
+                  <li class="flex items-center gap-3 py-3">
+                    <span
+                      aria-hidden="true"
+                      class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-orange-50 font-semibold text-orange-800"
+                      >A</span
+                    >
+                    <div class="min-w-0 flex-1">
+                      <p class="text-sm font-medium">Producto A</p>
+                      <p class="text-xs text-slate-500">50 € · 200 ventas</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-sm font-semibold tabular-nums">1.500 €</p>
+                      <p class="text-xs text-slate-500">33,3 % del total</p>
+                    </div>
+                  </li>
+                  <li class="flex items-center gap-3 py-3">
+                    <span
+                      aria-hidden="true"
+                      class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-teal-50 font-semibold text-teal-800"
+                      >C</span
+                    >
+                    <div class="min-w-0 flex-1">
+                      <p class="text-sm font-medium">Producto C</p>
+                      <p class="text-xs text-slate-500">80 € · 100 ventas</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-sm font-semibold tabular-nums">1.200 €</p>
+                      <p class="text-xs text-slate-500">26,7 % del total</p>
+                    </div>
+                  </li>
+                </ul>
+                <p
+                  class="mt-3 border-t border-stone-100 pt-4 text-xs leading-5 text-slate-500"
+                >
+                  El producto B genera
+                  <strong class="font-medium text-slate-800"
+                    >18 € por venta</strong
+                  >.
+                </p>
+              </article>
+
+              <article
+                class="rounded-xl border border-stone-200 bg-white p-5 sm:p-6 md:col-span-2 xl:col-span-1"
+              >
+                <h3 class="font-semibold">Conexión con tu comunidad</h3>
+                <p class="mt-1 text-xs text-slate-500">
+                  Engagement: interacciones / alcance
+                </p>
+                <div class="mt-5 flex items-baseline gap-2">
+                  <p class="text-3xl font-semibold tracking-tight tabular-nums">
+                    6,5 %
+                  </p>
+                  <span class="text-xs text-slate-500">global</span>
+                </div>
+                <dl class="mt-4 space-y-3 text-sm">
+                  <div class="flex justify-between">
+                    <dt>TikTok</dt>
+                    <dd class="font-semibold tabular-nums">8,0 %</dd>
+                  </div>
+                  <div class="flex justify-between">
+                    <dt>Instagram</dt>
+                    <dd class="font-semibold tabular-nums">5,0 %</dd>
+                  </div>
+                  <div class="flex justify-between">
+                    <dt>YouTube</dt>
+                    <dd class="font-semibold tabular-nums">5,0 %</dd>
+                  </div>
+                </dl>
+                <p
+                  class="mt-5 border-t border-stone-100 pt-4 text-xs leading-5 text-slate-500"
+                >
+                  <strong class="font-medium text-slate-800"
+                    >13.000 interacciones</strong
+                  >
+                  entre las tres plataformas.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <!-- Bloque inferior: detalles operacionales de las seis campañas. -->
+          <section
+            id="campanas"
+            aria-labelledby="titulo-campanas"
+            class="scroll-mt-6 overflow-hidden rounded-xl border border-stone-200 bg-white"
+          >
+            <div
+              class="flex flex-wrap items-center justify-between gap-2 px-4 pt-5 sm:px-6"
+            >
+              <div>
+                <h2
+                  id="titulo-campanas"
+                  class="text-lg font-semibold tracking-tight"
+                >
+                  Tus campañas, al detalle
+                </h2>
+                <p class="mt-1 text-xs text-slate-500">
+                  Abre una campaña para consultar todos sus datos.
+                </p>
+              </div>
+              <span
+                class="rounded-md bg-stone-100 px-2 py-1 text-xs text-slate-600"
+                >6 finalizadas</span
+              >
+            </div>
+            <table class="mt-5 w-full table-fixed md:table-auto">
+              <caption class="sr-only">
+                Resultados de las seis campañas de septiembre de 2026. Comisión
+                del 15 % sobre las ventas. Retorno igual a comisiones divididas
+                entre coste.
+              </caption>
+              <thead
+                class="border-y border-stone-200 bg-stone-50 text-xs text-slate-500"
+              >
+                <tr>
+                  <th
+                    scope="col"
+                    class="px-4 py-3 text-left font-medium sm:px-6"
+                  >
+                    Campaña
+                  </th>
+                  <th
+                    scope="col"
+                    class="hidden px-4 py-3 text-right font-medium lg:table-cell"
+                  >
+                    Alcance
+                  </th>
+                  <th
+                    scope="col"
+                    class="hidden px-4 py-3 text-right font-medium sm:table-cell"
+                  >
+                    Ventas
+                  </th>
+                  <th
+                    scope="col"
+                    class="hidden px-4 py-3 text-right font-medium md:table-cell"
+                  >
+                    Coste
+                  </th>
+                  <th
+                    scope="col"
+                    class="w-28 px-4 py-3 text-right font-medium sm:w-auto sm:px-6"
+                  >
+                    Comisiones
+                  </th>
+                  <th
+                    scope="col"
+                    class="hidden px-6 py-3 text-right font-medium md:table-cell"
+                  >
+                    Retorno
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                >
+                  <td class="px-4 py-4 text-left sm:px-6">
+                    <details>
+                      <summary
+                        class="cursor-pointer text-sm font-medium text-slate-800 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                      >
+                        Reel · favoritos del mes
+                      </summary>
+                      <dl
+                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                      >
+                        <div>
+                          <dt class="inline">Precio:</dt>
+                          <dd class="inline">50 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Ventas:</dt>
+                          <dd class="inline">80</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Alcance:</dt>
+                          <dd class="inline">30.000</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Coste:</dt>
+                          <dd class="inline">250 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Retorno:</dt>
+                          <dd class="inline">2,40×</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Fechas:</dt>
+                          <dd class="inline">1–30 sep. 2026</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Estado:</dt>
+                          <dd class="inline">Finalizada</dd>
+                        </div>
+                      </dl>
+                    </details>
+                    <p class="mt-1 text-xs text-slate-500">
+                      Instagram · Producto A
+                    </p>
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums lg:table-cell"
+                  >
+                    30.000
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums sm:table-cell"
+                  >
+                    80
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums md:table-cell"
+                  >
+                    250 €
+                  </td>
+                  <td
+                    class="px-4 py-4 text-right text-sm font-semibold whitespace-nowrap tabular-nums sm:px-6"
+                  >
+                    600 €
+                  </td>
+                  <td
+                    class="hidden px-6 py-4 text-right text-sm font-medium text-emerald-700 tabular-nums md:table-cell"
+                  >
+                    2,40×
+                  </td>
+                </tr>
+                <tr
+                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                >
+                  <td class="px-4 py-4 text-left sm:px-6">
+                    <details>
+                      <summary
+                        class="cursor-pointer text-sm font-medium text-slate-800 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                      >
+                        Vídeo · básicos diarios
+                      </summary>
+                      <dl
+                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                      >
+                        <div>
+                          <dt class="inline">Precio:</dt>
+                          <dd class="inline">50 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Ventas:</dt>
+                          <dd class="inline">120</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Alcance:</dt>
+                          <dd class="inline">50.000</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Coste:</dt>
+                          <dd class="inline">350 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Retorno:</dt>
+                          <dd class="inline">2,57×</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Fechas:</dt>
+                          <dd class="inline">1–30 sep. 2026</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Estado:</dt>
+                          <dd class="inline">Finalizada</dd>
+                        </div>
+                      </dl>
+                    </details>
+                    <p class="mt-1 text-xs text-slate-500">
+                      TikTok · Producto A
+                    </p>
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums lg:table-cell"
+                  >
+                    50.000
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums sm:table-cell"
+                  >
+                    120
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums md:table-cell"
+                  >
+                    350 €
+                  </td>
+                  <td
+                    class="px-4 py-4 text-right text-sm font-semibold whitespace-nowrap tabular-nums sm:px-6"
+                  >
+                    900 €
+                  </td>
+                  <td
+                    class="hidden px-6 py-4 text-right text-sm font-medium text-emerald-700 tabular-nums md:table-cell"
+                  >
+                    2,57×
+                  </td>
+                </tr>
+                <tr
+                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                >
+                  <td class="px-4 py-4 text-left sm:px-6">
+                    <details>
+                      <summary
+                        class="cursor-pointer text-sm font-medium text-slate-800 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                      >
+                        Stories · selección premium
+                      </summary>
+                      <dl
+                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                      >
+                        <div>
+                          <dt class="inline">Precio:</dt>
+                          <dd class="inline">120 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Ventas:</dt>
+                          <dd class="inline">40</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Alcance:</dt>
+                          <dd class="inline">30.000</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Coste:</dt>
+                          <dd class="inline">200 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Retorno:</dt>
+                          <dd class="inline">3,60×</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Fechas:</dt>
+                          <dd class="inline">1–30 sep. 2026</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Estado:</dt>
+                          <dd class="inline">Finalizada</dd>
+                        </div>
+                      </dl>
+                    </details>
+                    <p class="mt-1 text-xs text-slate-500">
+                      Instagram · Producto B
+                    </p>
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums lg:table-cell"
+                  >
+                    30.000
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums sm:table-cell"
+                  >
+                    40
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums md:table-cell"
+                  >
+                    200 €
+                  </td>
+                  <td
+                    class="px-4 py-4 text-right text-sm font-semibold whitespace-nowrap tabular-nums sm:px-6"
+                  >
+                    720 €
+                  </td>
+                  <td
+                    class="hidden px-6 py-4 text-right text-sm font-medium text-emerald-700 tabular-nums md:table-cell"
+                  >
+                    3,60×
+                  </td>
+                </tr>
+                <tr
+                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                >
+                  <td class="px-4 py-4 text-left sm:px-6">
+                    <details>
+                      <summary
+                        class="cursor-pointer text-sm font-medium text-slate-800 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                      >
+                        Review · a fondo
+                      </summary>
+                      <dl
+                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                      >
+                        <div>
+                          <dt class="inline">Precio:</dt>
+                          <dd class="inline">120 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Ventas:</dt>
+                          <dd class="inline">60</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Alcance:</dt>
+                          <dd class="inline">20.000</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Coste:</dt>
+                          <dd class="inline">400 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Retorno:</dt>
+                          <dd class="inline">2,70×</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Fechas:</dt>
+                          <dd class="inline">1–30 sep. 2026</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Estado:</dt>
+                          <dd class="inline">Finalizada</dd>
+                        </div>
+                      </dl>
+                    </details>
+                    <p class="mt-1 text-xs text-slate-500">
+                      YouTube · Producto B
+                    </p>
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums lg:table-cell"
+                  >
+                    20.000
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums sm:table-cell"
+                  >
+                    60
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums md:table-cell"
+                  >
+                    400 €
+                  </td>
+                  <td
+                    class="px-4 py-4 text-right text-sm font-semibold whitespace-nowrap tabular-nums sm:px-6"
+                  >
+                    1.080 €
+                  </td>
+                  <td
+                    class="hidden px-6 py-4 text-right text-sm font-medium text-emerald-700 tabular-nums md:table-cell"
+                  >
+                    2,70×
+                  </td>
+                </tr>
+                <tr
+                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                >
+                  <td class="px-4 py-4 text-left sm:px-6">
+                    <details>
+                      <summary
+                        class="cursor-pointer text-sm font-medium text-slate-800 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                      >
+                        Vídeo · descubrimientos
+                      </summary>
+                      <dl
+                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                      >
+                        <div>
+                          <dt class="inline">Precio:</dt>
+                          <dd class="inline">80 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Ventas:</dt>
+                          <dd class="inline">70</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Alcance:</dt>
+                          <dd class="inline">50.000</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Coste:</dt>
+                          <dd class="inline">200 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Retorno:</dt>
+                          <dd class="inline">4,20×</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Fechas:</dt>
+                          <dd class="inline">1–30 sep. 2026</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Estado:</dt>
+                          <dd class="inline">Finalizada</dd>
+                        </div>
+                      </dl>
+                    </details>
+                    <p class="mt-1 text-xs text-slate-500">
+                      TikTok · Producto C
+                    </p>
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums lg:table-cell"
+                  >
+                    50.000
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums sm:table-cell"
+                  >
+                    70
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums md:table-cell"
+                  >
+                    200 €
+                  </td>
+                  <td
+                    class="px-4 py-4 text-right text-sm font-semibold whitespace-nowrap tabular-nums sm:px-6"
+                  >
+                    840 €
+                  </td>
+                  <td
+                    class="hidden px-6 py-4 text-right text-sm font-medium text-emerald-700 tabular-nums md:table-cell"
+                  >
+                    4,20×
+                  </td>
+                </tr>
+                <tr
+                  class="border-t border-stone-100 align-top hover:bg-stone-50"
+                >
+                  <td class="px-4 py-4 text-left sm:px-6">
+                    <details>
+                      <summary
+                        class="cursor-pointer text-sm font-medium text-slate-800 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-600"
+                      >
+                        Tutorial · mi rutina
+                      </summary>
+                      <dl
+                        class="mt-3 space-y-1 text-xs font-normal text-slate-600"
+                      >
+                        <div>
+                          <dt class="inline">Precio:</dt>
+                          <dd class="inline">80 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Ventas:</dt>
+                          <dd class="inline">30</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Alcance:</dt>
+                          <dd class="inline">20.000</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Coste:</dt>
+                          <dd class="inline">100 €</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Retorno:</dt>
+                          <dd class="inline">3,60×</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Fechas:</dt>
+                          <dd class="inline">1–30 sep. 2026</dd>
+                        </div>
+                        <div>
+                          <dt class="inline">Estado:</dt>
+                          <dd class="inline">Finalizada</dd>
+                        </div>
+                      </dl>
+                    </details>
+                    <p class="mt-1 text-xs text-slate-500">
+                      YouTube · Producto C
+                    </p>
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums lg:table-cell"
+                  >
+                    20.000
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums sm:table-cell"
+                  >
+                    30
+                  </td>
+                  <td
+                    class="hidden px-4 py-4 text-right text-sm tabular-nums md:table-cell"
+                  >
+                    100 €
+                  </td>
+                  <td
+                    class="px-4 py-4 text-right text-sm font-semibold whitespace-nowrap tabular-nums sm:px-6"
+                  >
+                    360 €
+                  </td>
+                  <td
+                    class="hidden px-6 py-4 text-right text-sm font-medium text-emerald-700 tabular-nums md:table-cell"
+                  >
+                    3,60×
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot
+                class="border-t border-stone-200 bg-stone-50 text-sm font-semibold tabular-nums"
+              >
+                <tr>
+                  <th scope="row" class="px-4 py-4 text-left sm:px-6">Total</th>
+                  <td class="hidden px-4 py-4 text-right lg:table-cell">
+                    200.000
+                  </td>
+                  <td class="hidden px-4 py-4 text-right sm:table-cell">400</td>
+                  <td class="hidden px-4 py-4 text-right md:table-cell">
+                    1.500 €
+                  </td>
+                  <td class="px-4 py-4 text-right whitespace-nowrap sm:px-6">
+                    4.500 €
+                  </td>
+                  <td
+                    class="hidden px-6 py-4 text-right text-emerald-700 md:table-cell"
+                  >
+                    3,00×
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </section>
+
+          <details
+            class="rounded-xl border border-stone-200 bg-white p-5 text-sm"
+          >
+            <summary
+              class="cursor-pointer font-medium text-slate-700 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-indigo-600"
+            >
+              Cómo se calculan estos resultados
+            </summary>
+            <div
+              class="mt-4 grid gap-4 text-xs leading-6 text-slate-600 md:grid-cols-2"
+            >
+              <p>
+                <strong class="text-slate-800">Comisiones:</strong> ventas ×
+                precio del producto × 15 %.<br><strong class="text-slate-800"
+                  >Conversión:</strong
+                >
+                ventas / alcance × 100.
+              </p>
+              <p>
+                <strong class="text-slate-800">Engagement:</strong>
+                interacciones / alcance × 100.<br><strong
+                  class="text-slate-800"
+                  >Retorno:</strong
+                >
+                comisiones / coste de campaña. No equivale al ROI neto.
+              </p>
+              <p class="md:col-span-2">
+                Datos ficticios para este proyecto educativo. El alcance
+                agregado suma el de las campañas; no representa personas únicas
+                entre plataformas.
+              </p>
+            </div>
+          </details>
+          <footer
+            class="flex flex-wrap justify-between gap-2 border-t border-stone-200 pt-5 text-xs text-slate-500"
+          >
+            <p>
+              órbita.
+              <span class="ml-1">Un poco más de claridad para crear.</span>
+            </p>
+            <p>Proyecto educativo · HTML + Tailwind CSS v4</p>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
