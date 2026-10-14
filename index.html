@@ -29,12 +29,12 @@
         class="pointer-events-none absolute -top-28 right-0 -z-10 h-64 w-3/4 rotate-[-20deg] rounded-full bg-linear-to-l from-orange-700/45 via-stone-400/35 to-transparent blur-3xl"
       ></div>
       <aside
-        class="flex flex-wrap items-center gap-3 border-b border-white/5 p-1 sm:sticky sm:top-3 sm:h-[calc(100vh-1.5rem)] sm:flex-col sm:border-r sm:border-b-0 sm:py-3"
+        class="fixed inset-x-2 bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-40 flex items-center gap-3 rounded-2xl border border-white/10 bg-[#151515]/95 p-1 backdrop-blur-xl sm:inset-x-auto sm:top-3 sm:bottom-3 sm:left-3 sm:w-10 sm:flex-col sm:rounded-none sm:border-0 sm:border-r sm:border-white/5 sm:bg-[#0c0c0c] sm:py-3"
       >
         <a
           href="#resumen"
           aria-label="Órbita, resumen"
-          class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-white text-xl font-semibold text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+          class="hidden size-8 shrink-0 items-center justify-center rounded-lg bg-white text-xl font-semibold text-black sm:flex focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
           >ó</a
         >
         <nav
@@ -131,32 +131,21 @@
         </nav>
         <span
           aria-hidden="true"
-          class="order-2 ml-auto flex size-7 items-center justify-center rounded-full border border-white/15 bg-stone-800 text-xs text-stone-200 sm:order-none sm:mt-auto sm:ml-0"
+          class="order-2 ml-auto hidden size-7 items-center justify-center rounded-full border border-white/15 bg-stone-800 text-xs text-stone-200 sm:flex sm:order-none sm:mt-auto sm:ml-0"
           >C</span
         >
       </aside>
-      <main id="contenido" tabindex="-1" class="min-w-0 px-3 pt-2 pb-5">
-        <header class="mb-2">
+      <main
+        id="contenido"
+        tabindex="-1"
+        class="min-w-0 scroll-mt-5 px-3 pt-4 pb-[calc(6rem+env(safe-area-inset-bottom))] sm:col-start-2 sm:pt-5 sm:pb-5"
+      >
+        <header class="mb-4">
           <div class="flex items-center justify-between gap-3">
             <div
               class="flex items-center gap-2 text-[0.65rem] text-neutral-400"
             >
-              <a
-                href="#resumen"
-                aria-label="Volver al resumen"
-                class="flex size-7 items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
-                ><svg
-                  aria-hidden="true"
-                  class="size-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.7"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M19 12H5M10 7l-5 5 5 5"></path></svg></a
-              ><span>Mi espacio</span><span aria-hidden="true">›</span
+              <span>Mi espacio</span><span aria-hidden="true">›</span
               ><span
                 class="text-neutral-100 [body:has(#rendimiento:target)_&]:hidden [body:has(#campanas:target)_&]:hidden [body:has(#retorno:target)_&]:hidden"
                 >Resumen</span
@@ -171,74 +160,45 @@
                 >Retorno</span
               >
             </div>
-            <span
-              class="rounded-md border border-white/5 bg-white/5 px-2 py-1.5 text-[0.65rem] text-neutral-300"
-              >Datos de ejemplo</span
-            >
           </div>
-          <div class="mt-2 flex flex-wrap items-end justify-between gap-3">
+          <div class="mt-4 flex flex-wrap items-end justify-between gap-3">
             <div>
-              <h1 class="text-base font-medium leading-5 tracking-tight">
+              <h1 class="text-xl font-medium leading-7 tracking-tight">
                 Panel de creadora
               </h1>
-              <p class="mt-1 text-xs text-neutral-400">
+              <p class="mt-2 text-xs leading-5 text-neutral-400">
                 Crea con intención. Mide tu impacto.
               </p>
             </div>
-            <details class="group relative">
-              <!-- Período fijo del reporte de ejemplo. -->
-              <summary
-                class="flex min-h-10 cursor-pointer list-none items-center gap-2 rounded-xl bg-white px-3 py-2 text-[0.65rem] font-medium text-neutral-950 hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
+            <p class="flex items-center gap-2 text-xs text-neutral-400">
+              <svg
+                aria-hidden="true"
+                class="size-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
               >
-                <svg
-                  aria-hidden="true"
-                  class="size-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.7"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                  <path d="M7 3v4M17 3v4M3 11h18"></path>
-                </svg>
-                Septiembre 2026<svg
-                  aria-hidden="true"
-                  class="size-3 group-open:rotate-180"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="m4 6 4 4 4-4"></path>
-                </svg>
-              </summary>
-              <div
-                class="absolute left-0 top-full z-30 mt-2 w-56 max-w-[calc(100vw-3rem)] rounded-xl border border-white/15 bg-neutral-900 p-4 text-xs shadow-xl sm:right-0 sm:left-auto"
-              >
-                <p class="font-medium text-white">Período del reporte</p>
-                <p class="mt-2 leading-5 text-neutral-300">
-                  1–30 de septiembre de 2026.
-                </p>
-                <p class="mt-2 leading-5 text-neutral-400">
-                  Datos de ejemplo de seis campañas finalizadas.
-                </p>
-              </div>
-            </details>
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M7 3v4M17 3v4M3 11h18"></path></svg
+              ><time datetime="2026-09">Septiembre 2026</time>
+            </p>
           </div>
         </header>
         <!-- Bloque superior: cuatro KPIs. -->
         <section
           id="resumen"
           aria-label="Indicadores principales"
-          class="scroll-mt-5 rounded-2xl target:ring-1 target:ring-white/25"
+          class="scroll-mt-5 rounded-2xl sm:scroll-mt-5 target:ring-1 target:ring-white/25"
         >
           <div
-            class="grid grid-cols-1 gap-2.5 min-[360px]:grid-cols-2 lg:grid-cols-4"
+            role="group"
+            aria-label="Cuatro indicadores principales. Desplázate horizontalmente para consultar todos."
+            tabindex="0"
+            class="flex snap-x snap-mandatory gap-2.5 overflow-x-auto overscroll-x-contain rounded-2xl px-0.5 py-1 [scrollbar-width:thin] focus-visible:outline-2 focus-visible:outline-white/40 sm:grid sm:snap-none sm:grid-cols-2 sm:overflow-visible lg:grid-cols-4"
           >
             <article
-              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
+              class="flex min-w-0 shrink-0 basis-[85%] snap-start flex-col rounded-2xl sm:basis-auto border border-white/[0.03] bg-[#171717] p-3"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -257,85 +217,68 @@
                   <path d="m5 6 11-4v4M16 12h5v5h-5z"></path>
                 </svg>
                 <h2>Comisiones</h2>
+                <span class="group/hint relative ml-auto"
+                  ><button
+                    type="button"
+                    popovertarget="tip-kpi-commission"
+                    aria-describedby="tip-kpi-commission"
+                    aria-label="Información sobre Comisiones"
+                    class="flex size-7 items-center justify-center rounded-full text-neutral-500 hover:bg-white/5 hover:text-neutral-200 focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [anchor-name:--tip-kpi-commission]"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="size-3.5"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                    >
+                      <circle cx="10" cy="10" r="7"></circle>
+                      <path d="M10 9v5M10 6v1"></path>
+                    </svg></button
+                  ><span
+                    aria-hidden="true"
+                    class="absolute right-0 bottom-full z-50 hidden w-44 max-w-[calc(100vw-2rem)] pb-2 text-left group-hover/hint:block group-focus/hint:hidden [body:has([popover]:popover-open)_&]:hidden"
+                    ><span
+                      class="block rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60"
+                      ><span class="block font-medium text-white"
+                        >Comisiones generadas</span
+                      ><span class="mt-1 block"
+                        >Ventas × precio × 15 %. Total: 4.500 € sobre 30.000 €
+                        vendidos.</span
+                      ></span
+                    ></span
+                  ></span
+                >
               </div>
               <div
-                class="mt-2.5 flex min-h-12 items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-2"
+                class="mt-3 flex items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-3"
               >
-                <p
-                  class="whitespace-nowrap text-xl font-medium tracking-tight tabular-nums"
+                <span
+                  class="whitespace-nowrap text-2xl font-medium tracking-tight tabular-nums"
                 >
                   4.500<span class="ml-0.5 text-base text-neutral-400">€</span>
-                </p>
-                <svg
+                </span>
+                <span
                   aria-hidden="true"
-                  class="hidden h-8 w-20 shrink-0 sm:block text-blue-500"
-                  viewBox="0 0 80 40"
-                  fill="none"
-                >
-                  <rect
-                    x="2"
-                    y="8"
-                    width="24"
-                    height="29"
-                    rx="2"
-                    class="fill-current"
-                  ></rect>
-                  <rect
-                    x="28"
-                    y="14"
-                    width="24"
-                    height="23"
-                    rx="2"
-                    class="fill-current opacity-90"
-                  ></rect>
-                  <rect
-                    x="54"
-                    y="23"
-                    width="24"
-                    height="14"
-                    rx="2"
-                    class="fill-current opacity-80"
-                  ></rect>
-                  <path
-                    d="M2 9h15c18 0 20 28 61 28"
-                    stroke="white"
-                    stroke-opacity="0.65"
-                    stroke-width="1"
-                  ></path>
-                  <path d="M2 37h76" stroke="white" stroke-opacity="0.4"></path>
-                </svg>
+                  class="flex h-8 w-14 shrink-0 items-end gap-1"
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-blue-500 h-[75.86%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-blue-500 h-[100%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-blue-500 h-[82.76%]"
+                  ></span
+                ></span>
               </div>
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 15 % de 30.000 € vendidos
               </p>
-              <details name="kpi-help" class="group mt-auto pt-2">
-                <summary
-                  aria-label="Cálculo de Comisiones"
-                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
-                >
-                  <span class="group-open:hidden">Ver cálculo</span
-                  ><span class="hidden group-open:inline">Cerrar cálculo</span
-                  ><svg
-                    aria-hidden="true"
-                    class="size-3 shrink-0 group-open:rotate-180"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="m4 6 4 4 4-4"></path>
-                  </svg>
-                </summary>
-                <p
-                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
-                >
-                  200 × 7,50 € + 100 × 18 € + 100 × 12 € = 4.500 €. Comisión del
-                  15 % sobre cada producto.
-                </p>
-              </details>
             </article>
             <article
-              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
+              class="flex min-w-0 shrink-0 basis-[85%] snap-start flex-col rounded-2xl sm:basis-auto border border-white/[0.03] bg-[#171717] p-3"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -353,84 +296,68 @@
                   <path d="M5 8h14l1 13H4L5 8ZM8 8V6a4 4 0 0 1 8 0v2"></path>
                 </svg>
                 <h2>Ventas totales</h2>
+                <span class="group/hint relative ml-auto"
+                  ><button
+                    type="button"
+                    popovertarget="tip-kpi-sales"
+                    aria-describedby="tip-kpi-sales"
+                    aria-label="Información sobre Ventas totales"
+                    class="flex size-7 items-center justify-center rounded-full text-neutral-500 hover:bg-white/5 hover:text-neutral-200 focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [anchor-name:--tip-kpi-sales]"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="size-3.5"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                    >
+                      <circle cx="10" cy="10" r="7"></circle>
+                      <path d="M10 9v5M10 6v1"></path>
+                    </svg></button
+                  ><span
+                    aria-hidden="true"
+                    class="absolute right-0 bottom-full z-50 hidden w-44 max-w-[calc(100vw-2rem)] pb-2 text-left group-hover/hint:block group-focus/hint:hidden [body:has([popover]:popover-open)_&]:hidden"
+                    ><span
+                      class="block rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60"
+                      ><span class="block font-medium text-white"
+                        >Unidades vendidas</span
+                      ><span class="mt-1 block"
+                        >Producto A: 200 · B: 100 · C: 100. Total: 400
+                        ventas.</span
+                      ></span
+                    ></span
+                  ></span
+                >
               </div>
               <div
-                class="mt-2.5 flex min-h-12 items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-2"
+                class="mt-3 flex items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-3"
               >
-                <p
-                  class="whitespace-nowrap text-xl font-medium tracking-tight tabular-nums"
+                <span
+                  class="whitespace-nowrap text-2xl font-medium tracking-tight tabular-nums"
                 >
                   400<span class="ml-0.5 text-base text-neutral-400"></span>
-                </p>
-                <svg
+                </span>
+                <span
                   aria-hidden="true"
-                  class="hidden h-8 w-20 shrink-0 sm:block text-violet-500"
-                  viewBox="0 0 80 40"
-                  fill="none"
-                >
-                  <rect
-                    x="2"
-                    y="8"
-                    width="24"
-                    height="29"
-                    rx="2"
-                    class="fill-current"
-                  ></rect>
-                  <rect
-                    x="28"
-                    y="14"
-                    width="24"
-                    height="23"
-                    rx="2"
-                    class="fill-current opacity-90"
-                  ></rect>
-                  <rect
-                    x="54"
-                    y="23"
-                    width="24"
-                    height="14"
-                    rx="2"
-                    class="fill-current opacity-80"
-                  ></rect>
-                  <path
-                    d="M2 9h15c18 0 20 28 61 28"
-                    stroke="white"
-                    stroke-opacity="0.65"
-                    stroke-width="1"
-                  ></path>
-                  <path d="M2 37h76" stroke="white" stroke-opacity="0.4"></path>
-                </svg>
+                  class="flex h-8 w-14 shrink-0 items-end gap-1"
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-violet-500 h-[63.16%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-violet-500 h-[100%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-violet-500 h-[47.37%]"
+                  ></span
+                ></span>
               </div>
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 3 productos promocionados
               </p>
-              <details name="kpi-help" class="group mt-auto pt-2">
-                <summary
-                  aria-label="Cálculo de Ventas totales"
-                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
-                >
-                  <span class="group-open:hidden">Ver cálculo</span
-                  ><span class="hidden group-open:inline">Cerrar cálculo</span
-                  ><svg
-                    aria-hidden="true"
-                    class="size-3 shrink-0 group-open:rotate-180"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="m4 6 4 4 4-4"></path>
-                  </svg>
-                </summary>
-                <p
-                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
-                >
-                  200 unidades de A + 100 de B + 100 de C = 400 ventas.
-                </p>
-              </details>
             </article>
             <article
-              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
+              class="flex min-w-0 shrink-0 basis-[85%] snap-start flex-col rounded-2xl sm:basis-auto border border-white/[0.03] bg-[#171717] p-3"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -448,84 +375,67 @@
                   <path d="m12 3 8 5v8l-8 5-8-5V8zM8 12h8M13 9l3 3-3 3"></path>
                 </svg>
                 <h2>Conversión</h2>
+                <span class="group/hint relative ml-auto"
+                  ><button
+                    type="button"
+                    popovertarget="tip-kpi-conversion"
+                    aria-describedby="tip-kpi-conversion"
+                    aria-label="Información sobre Conversión"
+                    class="flex size-7 items-center justify-center rounded-full text-neutral-500 hover:bg-white/5 hover:text-neutral-200 focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [anchor-name:--tip-kpi-conversion]"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="size-3.5"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                    >
+                      <circle cx="10" cy="10" r="7"></circle>
+                      <path d="M10 9v5M10 6v1"></path>
+                    </svg></button
+                  ><span
+                    aria-hidden="true"
+                    class="absolute right-0 bottom-full z-50 hidden w-44 max-w-[calc(100vw-2rem)] pb-2 text-left group-hover/hint:block group-focus/hint:hidden [body:has([popover]:popover-open)_&]:hidden"
+                    ><span
+                      class="block rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60"
+                      ><span class="block font-medium text-white"
+                        >Tasa de conversión</span
+                      ><span class="mt-1 block"
+                        >400 ventas ÷ 200.000 de alcance × 100 = 0,20 %.</span
+                      ></span
+                    ></span
+                  ></span
+                >
               </div>
               <div
-                class="mt-2.5 flex min-h-12 items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-2"
+                class="mt-3 flex items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-3"
               >
-                <p
-                  class="whitespace-nowrap text-xl font-medium tracking-tight tabular-nums"
+                <span
+                  class="whitespace-nowrap text-2xl font-medium tracking-tight tabular-nums"
                 >
                   0,20<span class="ml-0.5 text-base text-neutral-400">%</span>
-                </p>
-                <svg
+                </span>
+                <span
                   aria-hidden="true"
-                  class="hidden h-8 w-20 shrink-0 sm:block text-orange-500"
-                  viewBox="0 0 80 40"
-                  fill="none"
-                >
-                  <rect
-                    x="2"
-                    y="8"
-                    width="24"
-                    height="29"
-                    rx="2"
-                    class="fill-current"
-                  ></rect>
-                  <rect
-                    x="28"
-                    y="14"
-                    width="24"
-                    height="23"
-                    rx="2"
-                    class="fill-current opacity-90"
-                  ></rect>
-                  <rect
-                    x="54"
-                    y="23"
-                    width="24"
-                    height="14"
-                    rx="2"
-                    class="fill-current opacity-80"
-                  ></rect>
-                  <path
-                    d="M2 9h15c18 0 20 28 61 28"
-                    stroke="white"
-                    stroke-opacity="0.65"
-                    stroke-width="1"
-                  ></path>
-                  <path d="M2 37h76" stroke="white" stroke-opacity="0.4"></path>
-                </svg>
+                  class="flex h-8 w-14 shrink-0 items-end gap-1"
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-orange-500 h-[88.89%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-orange-500 h-[84.44%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-orange-500 h-[100%]"
+                  ></span
+                ></span>
               </div>
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 400 ventas / 200.000 de alcance
               </p>
-              <details name="kpi-help" class="group mt-auto pt-2">
-                <summary
-                  aria-label="Cálculo de Conversión"
-                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
-                >
-                  <span class="group-open:hidden">Ver cálculo</span
-                  ><span class="hidden group-open:inline">Cerrar cálculo</span
-                  ><svg
-                    aria-hidden="true"
-                    class="size-3 shrink-0 group-open:rotate-180"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="m4 6 4 4 4-4"></path>
-                  </svg>
-                </summary>
-                <p
-                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
-                >
-                  400 ventas ÷ 200.000 de alcance × 100 = 0,20 %.
-                </p>
-              </details>
             </article>
             <article
-              class="flex min-w-0 flex-col rounded-2xl border border-white/[0.03] bg-[#171717] p-3 hover:border-white/15 focus-within:border-white/25"
+              class="flex min-w-0 shrink-0 basis-[85%] snap-start flex-col rounded-2xl sm:basis-auto border border-white/[0.03] bg-[#171717] p-3"
             >
               <div
                 class="flex items-center gap-2 text-xs font-medium text-neutral-100"
@@ -546,387 +456,422 @@
                   ></path>
                 </svg>
                 <h2>Engagement</h2>
+                <span class="group/hint relative ml-auto"
+                  ><button
+                    type="button"
+                    popovertarget="tip-kpi-engagement"
+                    aria-describedby="tip-kpi-engagement"
+                    aria-label="Información sobre Engagement"
+                    class="flex size-7 items-center justify-center rounded-full text-neutral-500 hover:bg-white/5 hover:text-neutral-200 focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100 [anchor-name:--tip-kpi-engagement]"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="size-3.5"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.4"
+                    >
+                      <circle cx="10" cy="10" r="7"></circle>
+                      <path d="M10 9v5M10 6v1"></path>
+                    </svg></button
+                  ><span
+                    aria-hidden="true"
+                    class="absolute right-0 bottom-full z-50 hidden w-44 max-w-[calc(100vw-2rem)] pb-2 text-left group-hover/hint:block group-focus/hint:hidden [body:has([popover]:popover-open)_&]:hidden"
+                    ><span
+                      class="block rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60"
+                      ><span class="block font-medium text-white"
+                        >Tasa de engagement</span
+                      ><span class="mt-1 block"
+                        >13.000 interacciones ÷ 200.000 de alcance × 100 = 6,5
+                        %.</span
+                      ></span
+                    ></span
+                  ></span
+                >
               </div>
               <div
-                class="mt-2.5 flex min-h-12 items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-2"
+                class="mt-3 flex items-center justify-between gap-2 rounded-xl bg-[#0c0c0c] px-3 py-3"
               >
-                <p
-                  class="whitespace-nowrap text-xl font-medium tracking-tight tabular-nums"
+                <span
+                  class="whitespace-nowrap text-2xl font-medium tracking-tight tabular-nums"
                 >
                   6,5<span class="ml-0.5 text-base text-neutral-400">%</span>
-                </p>
-                <svg
+                </span>
+                <span
                   aria-hidden="true"
-                  class="hidden h-8 w-20 shrink-0 sm:block text-red-500"
-                  viewBox="0 0 80 40"
-                  fill="none"
-                >
-                  <rect
-                    x="2"
-                    y="8"
-                    width="24"
-                    height="29"
-                    rx="2"
-                    class="fill-current"
-                  ></rect>
-                  <rect
-                    x="28"
-                    y="14"
-                    width="24"
-                    height="23"
-                    rx="2"
-                    class="fill-current opacity-90"
-                  ></rect>
-                  <rect
-                    x="54"
-                    y="23"
-                    width="24"
-                    height="14"
-                    rx="2"
-                    class="fill-current opacity-80"
-                  ></rect>
-                  <path
-                    d="M2 9h15c18 0 20 28 61 28"
-                    stroke="white"
-                    stroke-opacity="0.65"
-                    stroke-width="1"
-                  ></path>
-                  <path d="M2 37h76" stroke="white" stroke-opacity="0.4"></path>
-                </svg>
+                  class="flex h-8 w-14 shrink-0 items-end gap-1"
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-red-500 h-[62.5%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-red-500 h-[100%]"
+                  ></span
+                  ><span
+                    class="block w-1/3 rounded-t-sm bg-red-500 h-[62.5%]"
+                  ></span
+                ></span>
               </div>
               <p class="mt-2.5 text-[0.65rem] leading-4 text-neutral-400">
                 13.000 interacciones
               </p>
-              <details name="kpi-help" class="group mt-auto pt-2">
-                <summary
-                  aria-label="Cálculo de Engagement"
-                  class="flex min-h-10 cursor-pointer list-none items-center sm:min-h-8 justify-between gap-2 rounded-md px-1 text-[0.65rem] text-neutral-400 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
-                >
-                  <span class="group-open:hidden">Ver cálculo</span
-                  ><span class="hidden group-open:inline">Cerrar cálculo</span
-                  ><svg
-                    aria-hidden="true"
-                    class="size-3 shrink-0 group-open:rotate-180"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path d="m4 6 4 4 4-4"></path>
-                  </svg>
-                </summary>
-                <p
-                  class="mt-2 border-t border-white/10 pt-2 text-xs leading-5 text-neutral-300"
-                >
-                  13.000 interacciones ÷ 200.000 de alcance × 100 = 6,5 %.
-                </p>
-              </details>
             </article>
           </div>
+          <p class="mt-2 px-1 text-[0.65rem] text-neutral-400 sm:hidden">
+            Desliza para ver los 4 indicadores <span aria-hidden="true">→</span>
+          </p>
         </section>
         <!-- Bloque intermedio: tres drivers, con el lenguaje visual de la referencia. -->
         <section
           id="rendimiento"
           aria-labelledby="titulo-rendimiento"
-          class="mt-3 scroll-mt-5 target:ring-1 target:ring-white/25"
+          class="mt-3 scroll-mt-5 sm:scroll-mt-5 target:ring-1 target:ring-white/25"
         >
           <h2 id="titulo-rendimiento" class="sr-only">
             Rendimiento por producto, plataforma y comunidad
           </h2>
           <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             <article
-              class="flex min-w-0 flex-col rounded-3xl border border-white/5 bg-[#171717] p-3"
-            >
-              <h3 class="mb-2 flex items-center gap-2 px-1 text-sm font-medium">
-                <span
-                  class="flex size-7 items-center justify-center rounded-lg bg-white/5"
-                  ><svg
-                    aria-hidden="true"
-                    class="size-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect x="4" y="3" width="16" height="18" rx="3"></rect>
-                    <path d="M8 16v-4M12 16V7M16 16v-7"></path></svg></span
-                >Comisiones por producto
-              </h3>
-              <div
-                class="relative flex min-h-48 flex-1 flex-col overflow-hidden rounded-2xl border border-white/5 bg-linear-to-bl from-stone-600/75 via-neutral-900 to-[#0b0b0b] p-3"
-              >
-                <div class="relative mt-auto flex h-40 items-end gap-1.5">
-                  <div
-                    class="flex h-full min-w-0 flex-1 flex-col justify-end text-center"
-                  >
-                    <span class="text-[0.65rem] text-neutral-300"
-                      >Producto B</span
-                    ><span class="mb-2 text-base font-medium tabular-nums"
-                      >1.800 €</span
-                    >
-                    <div
-                      aria-hidden="true"
-                      class="h-28 rounded-t-lg border border-red-300/25 bg-red-500"
-                    ></div>
-                  </div>
-                  <div
-                    class="flex h-full min-w-0 flex-1 flex-col justify-end text-center"
-                  >
-                    <span class="text-[0.65rem] text-neutral-300"
-                      >Producto A</span
-                    ><span class="mb-2 text-base font-medium tabular-nums"
-                      >1.500 €</span
-                    >
-                    <div
-                      aria-hidden="true"
-                      class="h-[5.8333rem] rounded-t-lg border border-red-300/25 bg-red-500"
-                    ></div>
-                  </div>
-                  <div
-                    class="flex h-full min-w-0 flex-1 flex-col justify-end text-center"
-                  >
-                    <span class="text-[0.65rem] text-neutral-300"
-                      >Producto C</span
-                    ><span class="mb-2 text-base font-medium tabular-nums"
-                      >1.200 €</span
-                    >
-                    <div
-                      aria-hidden="true"
-                      class="h-[4.6667rem] rounded-t-lg border border-red-300/25 bg-red-500"
-                    ></div>
-                  </div>
-                  <svg
-                    aria-hidden="true"
-                    class="pointer-events-none absolute inset-x-0 bottom-0 h-28 w-full text-white"
-                    viewBox="0 0 300 144"
-                    preserveAspectRatio="none"
-                    fill="none"
-                  >
-                    <path
-                      d="M0 1C65 1 75 15 120 24S230 48 300 48"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    ></path>
-                    <circle cx="4" cy="1" r="3" fill="currentColor"></circle>
-                  </svg>
-                </div>
-                <p class="mt-3 text-[0.6rem] text-neutral-300">
-                  Precio: B 120 € · A 50 € · C 80 € · Comisión 15 %
-                </p>
-              </div>
-            </article>
-            <article
+              id="product-chart"
               class="flex min-w-0 flex-col rounded-3xl border border-white/5 bg-[#171717] p-3"
             >
               <h3 class="mb-2 flex items-center gap-2 px-1 text-sm font-medium">
                 <span
                   aria-hidden="true"
                   class="flex size-7 items-center justify-center rounded-lg bg-white/5"
-                  >◫</span
-                >Claves del período
+                  >▥</span
+                >Productos en comparación
               </h3>
+              <fieldset class="mb-3">
+                <legend class="sr-only">
+                  Métrica del gráfico de productos
+                </legend>
+                <div class="grid grid-cols-2 gap-1 rounded-lg bg-[#0c0c0c] p-1">
+                  <div>
+                    <input
+                      type="radio"
+                      id="chart-commission"
+                      name="product-metric"
+                      value="commission"
+                      class="peer sr-only"
+                      checked
+                   ><label
+                      for="chart-commission"
+                      class="flex min-h-9 cursor-pointer items-center justify-center rounded-md text-[0.65rem] font-medium text-neutral-400 hover:bg-white/5 peer-checked:bg-neutral-700 peer-checked:text-white peer-checked:hover:bg-neutral-600 peer-focus-visible:outline-2 peer-focus-visible:outline-white"
+                      >Comisiones</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="chart-sales"
+                      name="product-metric"
+                      value="sales"
+                      class="peer sr-only"
+                   ><label
+                      for="chart-sales"
+                      class="flex min-h-9 cursor-pointer items-center justify-center rounded-md text-[0.65rem] font-medium text-neutral-400 hover:bg-white/5 peer-checked:bg-neutral-700 peer-checked:text-white peer-checked:hover:bg-neutral-600 peer-focus-visible:outline-2 peer-focus-visible:outline-white"
+                      >Ventas</label
+                    >
+                  </div>
+                </div>
+              </fieldset>
               <div
-                class="flex flex-1 flex-col rounded-2xl border border-white/5 bg-[#0e0e0e] p-2"
+                class="relative rounded-2xl border border-white/5 bg-linear-to-bl from-stone-600/50 via-neutral-900 to-[#0b0b0b] px-3 pt-3 pb-3"
               >
-                <ul
-                  class="grid grid-cols-1 gap-1.5 min-[400px]:grid-cols-2 md:grid-cols-1 lg:grid-cols-2"
+                <div
+                  class="mb-1 flex justify-between text-[0.6rem] text-neutral-400"
                 >
-                  <li
-                    class="flex items-center gap-2 rounded-lg bg-[#1b1b1b] p-2"
+                  <span>Explora cada producto</span
+                  ><span class="[article:has(#chart-sales:checked)_&]:hidden"
+                    >Escala: 0–2.000 €</span
+                  ><span
+                    class="hidden [article:has(#chart-sales:checked)_&]:inline"
+                    >Escala: 0–200 ventas</span
                   >
-                    <span
+                </div>
+                <fieldset>
+                  <legend class="sr-only">
+                    Producto que quieres consultar
+                  </legend>
+                  <div class="relative grid grid-cols-3 gap-2 pt-6">
+                    <div
                       aria-hidden="true"
-                      class="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white/5 text-xs font-medium text-neutral-200"
-                      >T</span
+                      class="pointer-events-none absolute inset-x-0 top-6 bottom-5 flex flex-col justify-between"
                     >
-                    <div class="min-w-0">
-                      <p
-                        class="text-[0.65rem] font-medium leading-4 text-neutral-200"
-                      >
-                        TikTok
-                      </p>
-                      <p class="text-[0.6rem] leading-4 text-neutral-400">
-                        1.740 € en comisiones
-                      </p>
+                      <span
+                        class="border-t border-dashed border-white/15"
+                      ></span
+                      ><span
+                        class="border-t border-dashed border-white/10"
+                      ></span
+                      ><span class="border-t border-white/20"></span>
                     </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-2 rounded-lg bg-[#1b1b1b] p-2"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white/5 text-xs font-medium text-neutral-200"
-                      >Y</span
-                    >
-                    <div class="min-w-0">
-                      <p
-                        class="text-[0.65rem] font-medium leading-4 text-neutral-200"
+                    <div class="relative min-w-0">
+                      <button
+                        type="button"
+                        popovertarget="tip-product-b"
+                        aria-describedby="tip-product-b"
+                        aria-label="Información del Producto B"
+                        class="group/bar group/hint relative block w-full cursor-pointer rounded-md text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white [body:has(#tip-product-b:popover-open)_&_.bar]:border-white/80 [body:has(#tip-product-b:popover-open)_&_.bar]:bg-red-400 [anchor-name:--tip-product-b]"
                       >
-                        YouTube
-                      </p>
-                      <p class="text-[0.6rem] leading-4 text-neutral-400">
-                        1.440 € en comisiones
-                      </p>
+                        <span class="relative block h-24"
+                          ><span
+                            class="bar absolute inset-x-0 bottom-0 block h-[90%] rounded-t-md border border-red-300/20 bg-red-500 group-hover/bar:brightness-110 [article:has(#chart-sales:checked)_&]:hidden"
+                            ><span
+                              class="absolute -top-5 inset-x-0 whitespace-nowrap text-center text-xs font-medium tabular-nums"
+                              >1.800 €</span
+                            ></span
+                          ><span
+                            class="bar absolute inset-x-0 bottom-0 hidden h-[50%] rounded-t-md border border-red-300/20 bg-red-500 group-hover/bar:brightness-110 [article:has(#chart-sales:checked)_&]:block"
+                            ><span
+                              class="absolute -top-5 inset-x-0 text-center text-xs font-medium tabular-nums"
+                              >100</span
+                            ></span
+                          ></span
+                        ><span
+                          class="product-label mt-2 block text-center text-[0.65rem] text-neutral-400"
+                          >Producto B</span
+                        ><span
+                          aria-hidden="true"
+                          class="absolute left-0 bottom-full z-50 hidden w-44 max-w-[calc(100vw-2rem)] pb-2 text-left group-hover/hint:block group-focus/hint:hidden [body:has([popover]:popover-open)_&]:hidden"
+                          ><span
+                            class="block rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60"
+                            ><span class="mb-2 block font-medium text-white"
+                              >Producto B</span
+                            ><span class="flex justify-between gap-3"
+                              ><span>Comisiones</span
+                              ><span class="font-medium text-white"
+                                >1.800 €</span
+                              ></span
+                            ><span class="flex justify-between gap-3"
+                              ><span>Ventas</span
+                              ><span class="text-white">100</span></span
+                            ><span
+                              class="mt-2 block border-t border-white/10 pt-2"
+                              >Precio: 120 €<br>Comisión: 18 € por venta (15
+                              %)</span
+                            ></span
+                          ></span
+                        >
+                      </button>
                     </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-2 rounded-lg bg-[#1b1b1b] p-2"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white/5 text-xs font-medium text-neutral-200"
-                      >I</span
-                    >
-                    <div class="min-w-0">
-                      <p
-                        class="text-[0.65rem] font-medium leading-4 text-neutral-200"
+                    <div class="relative min-w-0">
+                      <button
+                        type="button"
+                        popovertarget="tip-product-a"
+                        aria-describedby="tip-product-a"
+                        aria-label="Información del Producto A"
+                        class="group/bar group/hint relative block w-full cursor-pointer rounded-md text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white [body:has(#tip-product-a:popover-open)_&_.bar]:border-white/80 [body:has(#tip-product-a:popover-open)_&_.bar]:bg-red-400 [anchor-name:--tip-product-a]"
                       >
-                        Instagram
-                      </p>
-                      <p class="text-[0.6rem] leading-4 text-neutral-400">
-                        1.320 € en comisiones
-                      </p>
+                        <span class="relative block h-24"
+                          ><span
+                            class="bar absolute inset-x-0 bottom-0 block h-[75%] rounded-t-md border border-red-300/20 bg-red-500 group-hover/bar:brightness-110 [article:has(#chart-sales:checked)_&]:hidden"
+                            ><span
+                              class="absolute -top-5 inset-x-0 whitespace-nowrap text-center text-xs font-medium tabular-nums"
+                              >1.500 €</span
+                            ></span
+                          ><span
+                            class="bar absolute inset-x-0 bottom-0 hidden h-[100%] rounded-t-md border border-red-300/20 bg-red-500 group-hover/bar:brightness-110 [article:has(#chart-sales:checked)_&]:block"
+                            ><span
+                              class="absolute -top-5 inset-x-0 text-center text-xs font-medium tabular-nums"
+                              >200</span
+                            ></span
+                          ></span
+                        ><span
+                          class="product-label mt-2 block text-center text-[0.65rem] text-neutral-400"
+                          >Producto A</span
+                        ><span
+                          aria-hidden="true"
+                          class="absolute left-0 bottom-full z-50 hidden w-44 max-w-[calc(100vw-2rem)] pb-2 text-left group-hover/hint:block group-focus/hint:hidden [body:has([popover]:popover-open)_&]:hidden"
+                          ><span
+                            class="block rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60"
+                            ><span class="mb-2 block font-medium text-white"
+                              >Producto A</span
+                            ><span class="flex justify-between gap-3"
+                              ><span>Comisiones</span
+                              ><span class="font-medium text-white"
+                                >1.500 €</span
+                              ></span
+                            ><span class="flex justify-between gap-3"
+                              ><span>Ventas</span
+                              ><span class="text-white">200</span></span
+                            ><span
+                              class="mt-2 block border-t border-white/10 pt-2"
+                              >Precio: 50 €<br>Comisión: 7,50 € por venta (15
+                              %)</span
+                            ></span
+                          ></span
+                        >
+                      </button>
                     </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-2 rounded-lg bg-[#1b1b1b] p-2"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white/5 text-xs font-medium text-neutral-200"
-                      >A</span
-                    >
-                    <div class="min-w-0">
-                      <p
-                        class="text-[0.65rem] font-medium leading-4 text-neutral-200"
+                    <div class="relative min-w-0">
+                      <button
+                        type="button"
+                        popovertarget="tip-product-c"
+                        aria-describedby="tip-product-c"
+                        aria-label="Información del Producto C"
+                        class="group/bar group/hint relative block w-full cursor-pointer rounded-md text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white [body:has(#tip-product-c:popover-open)_&_.bar]:border-white/80 [body:has(#tip-product-c:popover-open)_&_.bar]:bg-red-400 [anchor-name:--tip-product-c]"
                       >
-                        Más vendido
-                      </p>
-                      <p class="text-[0.6rem] leading-4 text-neutral-400">
-                        A: 200 unidades
-                      </p>
+                        <span class="relative block h-24"
+                          ><span
+                            class="bar absolute inset-x-0 bottom-0 block h-[60%] rounded-t-md border border-red-300/20 bg-red-500 group-hover/bar:brightness-110 [article:has(#chart-sales:checked)_&]:hidden"
+                            ><span
+                              class="absolute -top-5 inset-x-0 whitespace-nowrap text-center text-xs font-medium tabular-nums"
+                              >1.200 €</span
+                            ></span
+                          ><span
+                            class="bar absolute inset-x-0 bottom-0 hidden h-[50%] rounded-t-md border border-red-300/20 bg-red-500 group-hover/bar:brightness-110 [article:has(#chart-sales:checked)_&]:block"
+                            ><span
+                              class="absolute -top-5 inset-x-0 text-center text-xs font-medium tabular-nums"
+                              >100</span
+                            ></span
+                          ></span
+                        ><span
+                          class="product-label mt-2 block text-center text-[0.65rem] text-neutral-400"
+                          >Producto C</span
+                        ><span
+                          aria-hidden="true"
+                          class="absolute right-0 bottom-full z-50 hidden w-44 max-w-[calc(100vw-2rem)] pb-2 text-left group-hover/hint:block group-focus/hint:hidden [body:has([popover]:popover-open)_&]:hidden"
+                          ><span
+                            class="block rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60"
+                            ><span class="mb-2 block font-medium text-white"
+                              >Producto C</span
+                            ><span class="flex justify-between gap-3"
+                              ><span>Comisiones</span
+                              ><span class="font-medium text-white"
+                                >1.200 €</span
+                              ></span
+                            ><span class="flex justify-between gap-3"
+                              ><span>Ventas</span
+                              ><span class="text-white">100</span></span
+                            ><span
+                              class="mt-2 block border-t border-white/10 pt-2"
+                              >Precio: 80 €<br>Comisión: 12 € por venta (15
+                              %)</span
+                            ></span
+                          ></span
+                        >
+                      </button>
                     </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-2 rounded-lg bg-[#1b1b1b] p-2"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white/5 text-xs font-medium text-neutral-200"
-                      >%</span
-                    >
-                    <div class="min-w-0">
-                      <p
-                        class="text-[0.65rem] font-medium leading-4 text-neutral-200"
-                      >
-                        Conversión
-                      </p>
-                      <p class="text-[0.6rem] leading-4 text-neutral-400">
-                        YouTube: 0,225 %
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-2 rounded-lg bg-[#1b1b1b] p-2"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white/5 text-xs font-medium text-neutral-200"
-                      >R</span
-                    >
-                    <div class="min-w-0">
-                      <p
-                        class="text-[0.65rem] font-medium leading-4 text-neutral-200"
-                      >
-                        Retorno
-                      </p>
-                      <p class="text-[0.6rem] leading-4 text-neutral-400">
-                        TikTok: 3,16×
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-                <p
-                  class="mt-auto border-t border-white/5 px-2 pt-3 pb-1 text-[0.65rem] leading-4 text-neutral-400"
-                >
-                  TikTok genera el
-                  <span class="text-neutral-200">38,7 %</span> de tus
-                  comisiones.
-                </p>
+                  </div>
+                </fieldset>
               </div>
+            </article>
+            <article
+              class="flex min-w-0 flex-col rounded-3xl border border-white/5 bg-[#171717] p-3"
+            >
+              <h3 class="mb-1 px-1 text-sm font-medium">
+                Retorno por plataforma
+              </h3>
+              <p class="mb-3 px-1 text-[0.65rem] text-neutral-400">
+                Comisiones por cada euro de publicidad
+              </p>
+              <dl
+                class="divide-y divide-white/5 rounded-2xl border border-white/5 bg-[#0c0c0c] px-3"
+              >
+                <div class="grid grid-cols-2 gap-y-1.5 py-3">
+                  <dt class="text-xs font-medium">TikTok</dt>
+                  <dd
+                    class="text-right text-sm font-medium text-emerald-400 tabular-nums"
+                  >
+                    3,16×
+                  </dd>
+                  <dd
+                    class="col-span-2 text-[0.65rem] leading-4 text-neutral-400"
+                  >
+                    1.740 € comisiones · 550 € publicidad<br>Conversión:
+                    <span class="text-neutral-200">0,19 %</span>
+                  </dd>
+                </div>
+                <div class="grid grid-cols-2 gap-y-1.5 py-3">
+                  <dt class="text-xs font-medium">Instagram</dt>
+                  <dd
+                    class="text-right text-sm font-medium text-emerald-400 tabular-nums"
+                  >
+                    2,93×
+                  </dd>
+                  <dd
+                    class="col-span-2 text-[0.65rem] leading-4 text-neutral-400"
+                  >
+                    1.320 € comisiones · 450 € publicidad<br>Conversión:
+                    <span class="text-neutral-200">0,20 %</span>
+                  </dd>
+                </div>
+                <div class="grid grid-cols-2 gap-y-1.5 py-3">
+                  <dt class="text-xs font-medium">YouTube</dt>
+                  <dd
+                    class="text-right text-sm font-medium text-emerald-400 tabular-nums"
+                  >
+                    2,88×
+                  </dd>
+                  <dd
+                    class="col-span-2 text-[0.65rem] leading-4 text-neutral-400"
+                  >
+                    1.440 € comisiones · 500 € publicidad<br>Conversión:
+                    <span class="text-neutral-200">0,225 %</span>
+                  </dd>
+                </div>
+              </dl>
             </article>
             <article
               class="flex min-w-0 flex-col rounded-3xl border border-white/5 bg-[#171717] p-3 md:col-span-2 lg:col-span-1"
             >
-              <h3 class="mb-2 flex items-center gap-2 px-1 text-sm font-medium">
-                <span
-                  class="flex size-7 items-center justify-center rounded-lg bg-white/5"
-                  ><svg
-                    aria-hidden="true"
-                    class="size-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="m9 3 2 5 5 2-5 2-2 5-2-5-5-2 5-2zM19 14l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"
-                    ></path></svg></span
-                >Tu comunidad responde
+              <h3 class="mb-1 px-1 text-sm font-medium">
+                Engagement por plataforma
               </h3>
-              <div
-                class="relative isolate flex min-h-48 flex-1 flex-col overflow-hidden rounded-2xl border border-white/5 bg-linear-to-bl from-stone-600/75 via-neutral-900 to-[#0b0b0b] p-4"
+              <p class="mb-3 px-1 text-[0.65rem] text-neutral-400">
+                Interacciones respecto al alcance
+              </p>
+              <dl
+                class="space-y-4 rounded-2xl border border-white/5 bg-linear-to-bl from-stone-600/30 via-neutral-900 to-[#0b0b0b] p-3"
               >
-                <div
-                  aria-hidden="true"
-                  class="pointer-events-none absolute -top-10 -right-24 -z-10 size-64 rounded-full border-[2rem] border-white/[0.03]"
-                ></div>
-                <p class="text-xl font-medium tracking-tight">
-                  6,5 % de engagement
-                </p>
-                <p
-                  class="mt-2 max-w-64 text-[0.67rem] leading-4 text-neutral-300"
-                >
-                  13.000 interacciones en tus redes. TikTok lidera la conexión
-                  con tu comunidad.
-                </p>
-                <dl
-                  class="mt-4 grid grid-cols-3 gap-2 border-t border-white/10 pt-3 text-[0.65rem]"
-                >
-                  <div>
-                    <dt class="text-neutral-300">TikTok</dt>
-                    <dd class="mt-1 text-sm font-medium tabular-nums">8,0 %</dd>
-                  </div>
-                  <div>
-                    <dt class="text-neutral-300">Instagram</dt>
-                    <dd class="mt-1 text-sm font-medium tabular-nums">5,0 %</dd>
-                  </div>
-                  <div>
-                    <dt class="text-neutral-300">YouTube</dt>
-                    <dd class="mt-1 text-sm font-medium tabular-nums">5,0 %</dd>
-                  </div>
-                </dl>
-                <a
-                  href="#campanas"
-                  class="mt-auto flex min-h-10 w-fit items-center gap-5 rounded-xl bg-white px-4 py-2 text-xs font-medium text-black hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-safe:transition-transform motion-safe:duration-150 motion-safe:ease-[cubic-bezier(0.23,1,0.32,1)] motion-safe:active:scale-[0.97] focus-visible:transition-none focus-visible:active:scale-100"
-                  >Ver las campañas
-                  <svg
+                <div class="grid grid-cols-2 gap-y-2">
+                  <dt class="text-xs font-medium">TikTok</dt>
+                  <dd class="text-right text-sm font-medium tabular-nums">
+                    8,0 %
+                  </dd>
+                  <div
                     aria-hidden="true"
-                    class="size-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    class="col-span-2 h-2 rounded-full bg-white/5"
                   >
-                    <path d="M5 12h14M14 7l5 5-5 5"></path></svg
-                ></a>
-              </div>
+                    <div class="h-2 w-[100%] rounded-full bg-red-400"></div>
+                  </div>
+                  <dd class="col-span-2 text-[0.65rem] text-neutral-400">
+                    8.000 interacciones · 100.000 de alcance
+                  </dd>
+                </div>
+                <div class="grid grid-cols-2 gap-y-2">
+                  <dt class="text-xs font-medium">Instagram</dt>
+                  <dd class="text-right text-sm font-medium tabular-nums">
+                    5,0 %
+                  </dd>
+                  <div
+                    aria-hidden="true"
+                    class="col-span-2 h-2 rounded-full bg-white/5"
+                  >
+                    <div class="h-2 w-[62.5%] rounded-full bg-red-400"></div>
+                  </div>
+                  <dd class="col-span-2 text-[0.65rem] text-neutral-400">
+                    3.000 interacciones · 60.000 de alcance
+                  </dd>
+                </div>
+                <div class="grid grid-cols-2 gap-y-2">
+                  <dt class="text-xs font-medium">YouTube</dt>
+                  <dd class="text-right text-sm font-medium tabular-nums">
+                    5,0 %
+                  </dd>
+                  <div
+                    aria-hidden="true"
+                    class="col-span-2 h-2 rounded-full bg-white/5"
+                  >
+                    <div class="h-2 w-[62.5%] rounded-full bg-red-400"></div>
+                  </div>
+                  <dd class="col-span-2 text-[0.65rem] text-neutral-400">
+                    2.000 interacciones · 40.000 de alcance
+                  </dd>
+                </div>
+              </dl>
             </article>
           </div>
         </section>
@@ -937,7 +882,7 @@
           <section
             id="campanas"
             aria-labelledby="titulo-campanas"
-            class="[&:has(#filter-instagram:checked)_tbody_tr:not([data-platform=instagram])]:hidden [&:has(#filter-tiktok:checked)_tbody_tr:not([data-platform=tiktok])]:hidden [&:has(#filter-youtube:checked)_tbody_tr:not([data-platform=youtube])]:hidden scroll-mt-6 overflow-hidden rounded-3xl border border-white/5 bg-[#171717] target:ring-1 target:ring-white/25"
+            class="[&:has(#filter-instagram:checked)_tbody_tr:not([data-platform=instagram])]:hidden [&:has(#filter-tiktok:checked)_tbody_tr:not([data-platform=tiktok])]:hidden [&:has(#filter-youtube:checked)_tbody_tr:not([data-platform=youtube])]:hidden scroll-mt-5 overflow-hidden sm:scroll-mt-6 rounded-3xl border border-white/5 bg-[#171717] target:ring-1 target:ring-white/25"
           >
             <div
               class="flex flex-wrap items-center justify-between gap-2 px-4 pt-5 sm:px-4"
@@ -949,7 +894,7 @@
                 >
                   Tus campañas, al detalle
                 </h2>
-                <p class="mt-1 text-xs text-neutral-400">
+                <p class="mt-2 text-xs leading-5 text-neutral-400">
                   Abre una campaña para consultar todos sus datos.
                 </p>
               </div>
@@ -1146,7 +1091,7 @@
                         </div>
                       </dl>
                     </details>
-                    <p class="mt-1 text-xs text-neutral-400">
+                    <p class="mt-2 text-xs leading-5 text-neutral-400">
                       Instagram · Producto A
                     </p>
                   </td>
@@ -1230,7 +1175,7 @@
                         </div>
                       </dl>
                     </details>
-                    <p class="mt-1 text-xs text-neutral-400">
+                    <p class="mt-2 text-xs leading-5 text-neutral-400">
                       TikTok · Producto A
                     </p>
                   </td>
@@ -1314,7 +1259,7 @@
                         </div>
                       </dl>
                     </details>
-                    <p class="mt-1 text-xs text-neutral-400">
+                    <p class="mt-2 text-xs leading-5 text-neutral-400">
                       Instagram · Producto B
                     </p>
                   </td>
@@ -1398,7 +1343,7 @@
                         </div>
                       </dl>
                     </details>
-                    <p class="mt-1 text-xs text-neutral-400">
+                    <p class="mt-2 text-xs leading-5 text-neutral-400">
                       YouTube · Producto B
                     </p>
                   </td>
@@ -1482,7 +1427,7 @@
                         </div>
                       </dl>
                     </details>
-                    <p class="mt-1 text-xs text-neutral-400">
+                    <p class="mt-2 text-xs leading-5 text-neutral-400">
                       TikTok · Producto C
                     </p>
                   </td>
@@ -1566,7 +1511,7 @@
                         </div>
                       </dl>
                     </details>
-                    <p class="mt-1 text-xs text-neutral-400">
+                    <p class="mt-2 text-xs leading-5 text-neutral-400">
                       YouTube · Producto C
                     </p>
                   </td>
@@ -1692,7 +1637,7 @@
           <section
             id="retorno"
             aria-labelledby="titulo-retorno"
-            class="scroll-mt-5 rounded-3xl border border-white/5 bg-[#171717] p-3 target:ring-1 target:ring-white/25"
+            class="scroll-mt-5 rounded-3xl sm:scroll-mt-5 border border-white/5 bg-[#171717] p-3 target:ring-1 target:ring-white/25"
           >
             <h2
               id="titulo-retorno"
@@ -1714,7 +1659,10 @@
                   <circle cx="17" cy="17" r="3"></circle>
                   <path d="M5 19 19 5"></path></svg></span
               >Margen de comisiones
-            </h2><p class="-mt-1 mb-3 px-1 text-[0.65rem] text-neutral-400">Todas las redes · Septiembre</p>
+            </h2>
+            <p class="-mt-1 mb-3 px-1 text-[0.65rem] text-neutral-400">
+              Todas las redes · Septiembre
+            </p>
             <div
               class="relative isolate overflow-hidden rounded-2xl border border-white/5 bg-[#0c0c0c] px-4 pt-7 pb-5"
             >
@@ -1757,34 +1705,10 @@
             </div>
           </section>
         </div>
-        <details
-          class="mt-3 rounded-2xl border border-white/5 bg-[#171717] p-4 text-xs"
-        >
-          <summary
-            class="cursor-pointer font-medium text-neutral-200 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-          >
-            Cómo se calculan estos resultados
-          </summary>
-          <div
-            class="mt-4 grid gap-4 text-xs leading-6 text-neutral-400 md:grid-cols-2"
-          >
-            <p>
-              <strong class="font-medium text-neutral-200">Comisiones:</strong>
-              ventas × precio × 15 %.<br>Conversión: ventas / alcance ×
-              100.<br>Engagement: interacciones / alcance × 100.
-            </p>
-            <p>
-              <strong class="font-medium text-neutral-200">Margen:</strong>
-              (comisiones − publicidad) / comisiones × 100.<br>Retorno:
-              comisiones / publicidad; no equivale al ROI neto.<br>Período:
-              1–30 de septiembre de 2026.
-            </p>
-            <p class="md:col-span-2">
-              Todos los datos son ficticios. El alcance agregado de 200.000 suma
-              campañas; no representa personas únicas entre plataformas.
-            </p>
-          </div>
-        </details>
+        <p class="mt-4 text-[0.65rem] leading-5 text-neutral-500">
+          Datos ficticios. El alcance suma campañas; no representa personas
+          únicas entre redes.
+        </p>
         <footer
           class="mt-5 flex flex-wrap justify-between gap-2 text-[0.65rem] text-neutral-500"
         >
@@ -1792,6 +1716,115 @@
           <p>Proyecto educativo · HTML + Tailwind CSS v4</p>
         </footer>
       </main>
+    </div>
+
+    <div
+      id="tip-kpi-commission"
+      popover="auto"
+      role="tooltip"
+      class="fixed m-0 w-52 max-w-[calc(100vw-2rem)] inset-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:mt-2 sm:translate-x-0 sm:translate-y-0 sm:[top:anchor(bottom)] sm:[left:anchor(left)] [position-try-fallbacks:flip-inline,flip-block] rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60 [position-anchor:--tip-kpi-commission]"
+    >
+      <span class="block font-medium text-white">Comisiones generadas</span
+      ><span class="mt-1 block"
+        >Ventas × precio × 15 %. Total: 4.500 € sobre 30.000 € vendidos.</span
+      >
+      <p class="mt-2 border-t border-white/10 pt-2 text-[0.65rem]">
+        Barras: Instagram, TikTok y YouTube.<br>Instagram 1.320 € · TikTok
+        1.740 € · YouTube 1.440 €
+      </p>
+    </div>
+    <div
+      id="tip-kpi-sales"
+      popover="auto"
+      role="tooltip"
+      class="fixed m-0 w-52 max-w-[calc(100vw-2rem)] inset-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:mt-2 sm:translate-x-0 sm:translate-y-0 sm:[top:anchor(bottom)] sm:[left:anchor(left)] [position-try-fallbacks:flip-inline,flip-block] rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60 [position-anchor:--tip-kpi-sales]"
+    >
+      <span class="block font-medium text-white">Unidades vendidas</span
+      ><span class="mt-1 block"
+        >Producto A: 200 · B: 100 · C: 100. Total: 400 ventas.</span
+      >
+      <p class="mt-2 border-t border-white/10 pt-2 text-[0.65rem]">
+        Barras: Instagram, TikTok y YouTube.<br>Instagram 120 · TikTok 190 ·
+        YouTube 90
+      </p>
+    </div>
+    <div
+      id="tip-kpi-conversion"
+      popover="auto"
+      role="tooltip"
+      class="fixed m-0 w-52 max-w-[calc(100vw-2rem)] inset-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:mt-2 sm:translate-x-0 sm:translate-y-0 sm:[top:anchor(bottom)] sm:[left:anchor(left)] [position-try-fallbacks:flip-inline,flip-block] rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60 [position-anchor:--tip-kpi-conversion]"
+    >
+      <span class="block font-medium text-white">Tasa de conversión</span
+      ><span class="mt-1 block"
+        >400 ventas ÷ 200.000 de alcance × 100 = 0,20 %.</span
+      >
+      <p class="mt-2 border-t border-white/10 pt-2 text-[0.65rem]">
+        Barras: Instagram, TikTok y YouTube.<br>Instagram 0,20 % · TikTok 0,19
+        % · YouTube 0,225 %
+      </p>
+    </div>
+    <div
+      id="tip-kpi-engagement"
+      popover="auto"
+      role="tooltip"
+      class="fixed m-0 w-52 max-w-[calc(100vw-2rem)] inset-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:mt-2 sm:translate-x-0 sm:translate-y-0 sm:[top:anchor(bottom)] sm:[left:anchor(left)] [position-try-fallbacks:flip-inline,flip-block] rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60 [position-anchor:--tip-kpi-engagement]"
+    >
+      <span class="block font-medium text-white">Tasa de engagement</span
+      ><span class="mt-1 block"
+        >13.000 interacciones ÷ 200.000 de alcance × 100 = 6,5 %.</span
+      >
+      <p class="mt-2 border-t border-white/10 pt-2 text-[0.65rem]">
+        Barras: Instagram, TikTok y YouTube.<br>Instagram 5 % · TikTok 8 % ·
+        YouTube 5 %
+      </p>
+    </div>
+    <div
+      id="tip-product-b"
+      popover="auto"
+      role="tooltip"
+      class="fixed m-0 w-52 max-w-[calc(100vw-2rem)] inset-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:mt-2 sm:translate-x-0 sm:translate-y-0 sm:[top:anchor(bottom)] sm:[left:anchor(left)] [position-try-fallbacks:flip-inline,flip-block] rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60 [position-anchor:--tip-product-b]"
+    >
+      <span class="mb-2 block font-medium text-white">Producto B</span
+      ><span class="flex justify-between gap-3"
+        ><span>Comisiones</span
+        ><span class="font-medium text-white">1.800 €</span></span
+      ><span class="flex justify-between gap-3"
+        ><span>Ventas</span><span class="text-white">100</span></span
+      ><span class="mt-2 block border-t border-white/10 pt-2"
+        >Precio: 120 €<br>Comisión: 18 € por venta (15 %)</span
+      >
+    </div>
+    <div
+      id="tip-product-a"
+      popover="auto"
+      role="tooltip"
+      class="fixed m-0 w-52 max-w-[calc(100vw-2rem)] inset-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:mt-2 sm:translate-x-0 sm:translate-y-0 sm:[top:anchor(bottom)] sm:[left:anchor(left)] [position-try-fallbacks:flip-inline,flip-block] rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60 [position-anchor:--tip-product-a]"
+    >
+      <span class="mb-2 block font-medium text-white">Producto A</span
+      ><span class="flex justify-between gap-3"
+        ><span>Comisiones</span
+        ><span class="font-medium text-white">1.500 €</span></span
+      ><span class="flex justify-between gap-3"
+        ><span>Ventas</span><span class="text-white">200</span></span
+      ><span class="mt-2 block border-t border-white/10 pt-2"
+        >Precio: 50 €<br>Comisión: 7,50 € por venta (15 %)</span
+      >
+    </div>
+    <div
+      id="tip-product-c"
+      popover="auto"
+      role="tooltip"
+      class="fixed m-0 w-52 max-w-[calc(100vw-2rem)] inset-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:mt-2 sm:translate-x-0 sm:translate-y-0 sm:[top:anchor(bottom)] sm:[left:anchor(left)] [position-try-fallbacks:flip-inline,flip-block] rounded-xl border border-white/15 bg-[#1b1b1b] p-3 text-xs leading-5 text-neutral-300 shadow-2xl shadow-black/60 [position-anchor:--tip-product-c]"
+    >
+      <span class="mb-2 block font-medium text-white">Producto C</span
+      ><span class="flex justify-between gap-3"
+        ><span>Comisiones</span
+        ><span class="font-medium text-white">1.200 €</span></span
+      ><span class="flex justify-between gap-3"
+        ><span>Ventas</span><span class="text-white">100</span></span
+      ><span class="mt-2 block border-t border-white/10 pt-2"
+        >Precio: 80 €<br>Comisión: 12 € por venta (15 %)</span
+      >
     </div>
   </body>
 </html>
