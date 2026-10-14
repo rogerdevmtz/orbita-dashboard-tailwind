@@ -24,7 +24,7 @@ Visita http://127.0.0.1:5500. Python solo sirve los archivos durante el desarrol
 
 ## Diseño e interacción
 
-La referencia proporcionada guía el fondo negro, las tarjetas oscuras redondeadas, el reflejo cálido, las barras de color y el indicador circular cálido. La paleta de estadísticas usa azul zafiro, violeta, ámbar y coral rubí, con degradados intensos y reflejos discretos sobre las superficies oscuras. La tarjeta de comunidad conserva el fondo con profundidad, el aro decorativo, el resumen por red y el acceso directo a campañas.
+La referencia proporcionada guía el fondo negro, las tarjetas oscuras redondeadas, el reflejo cálido, las barras de color y el indicador circular cálido. La paleta de estadísticas usa azul zafiro, violeta, ámbar y coral rubí, con colores saturados, degradados cortos y sin reflejos pálidos sobre las superficies oscuras. La tarjeta de comunidad conserva el fondo con profundidad, el aro decorativo, el resumen por red y el acceso directo a campañas.
 
 En móvil, los cuatro KPIs forman un grupo horizontal deslizable con ajuste por tarjeta. Se ve parte de la siguiente tarjeta y una pista breve indica cómo descubrir las demás. El grupo recibe foco y admite flechas del teclado; los botones de ayuda también llevan el foco a cada tarjeta. Solo este grupo se desplaza horizontalmente, sin ampliar el ancho de la página. Desde sm se muestran dos columnas y desde lg, cuatro.
 
