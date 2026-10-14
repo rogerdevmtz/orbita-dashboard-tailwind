@@ -15,7 +15,7 @@ Visita http://127.0.0.1:5500. Python sirve los archivos durante el desarrollo; n
 ## Requisitos implementados
 
 - HTML semántico y Tailwind CSS v4, sin CSS personalizado ni JavaScript de aplicación.
-- Superior: tres KPIs (comisiones, ventas y conversión).
+- Superior: cuatro KPIs (comisiones, ventas, conversión y engagement).
 - Intermedio: tres drivers (plataformas, productos y engagement).
 - Inferior: tabla de seis campañas, detalles desplegables y totales.
 - Mobile-first con sm, md, lg y xl. Las columnas secundarias se consultan en los detalles de campaña cuando no caben.
@@ -48,18 +48,22 @@ La rama del proyecto es `codex/dashboard-tailwind`. El remoto `origin` apunta al
 
 ## Diseño
 
-Navegación en azul noche, superficies claras, acentos índigo para ingresos y verde para engagement. Los tres KPIs comparten patrones de tipografía, espaciado e iconos SVG decorativos integrados en el HTML, sin librerías adicionales. En móvil, las comisiones ocupan una fila y los otros dos indicadores comparten la siguiente para reducir el scroll. Las comparativas por plataforma se ordenan por comisiones; las barras de engagement muestran proporciones respecto al mayor valor del período.
+Diseño realizado a partir de la referencia visual proporcionada por el usuario: fondo negro, rail lateral compacto, cuatro KPIs con miniaturas de color, tres paneles centrales, tabla de campañas y un indicador circular de margen. Superficies oscuras, reflejos cálidos, tarjetas redondeadas, barras rojas y gauge naranja. Todo el estilo está expresado en utilidades de Tailwind v4, incluyendo degradados; no hay CSS personalizado ni dependencias visuales.
+
+El contenido sigue el reto de la influencer: se conservan los productos A/B/C, la comisión del 15 %, las seis campañas y las fórmulas. Las miniaturas de los KPIs son motivos decorativos, sin una serie temporal asociada. Las barras grandes representan las comisiones de cada producto. El indicador circular representa (4.500 − 1.500) / 4.500 = 66,7 % de margen después de publicidad.
+
+En móvil, la navegación se sitúa arriba, los KPIs pasan a una o dos columnas y los paneles se apilan. Se mantienen accesibles las columnas secundarias de la tabla mediante los detalles nativos de cada campaña.
 
 ## Verificación de la rúbrica
 
-| Criterio | Implementación | Comprobación |
-| --- | --- | --- |
-| HTML semántico | Un main y un h1, header, nav, aside, tres section, seis article, table con caption, thead, tbody, tfoot y encabezados scope=col | html-validate sin errores |
-| Tailwind CSS v4 | CDN oficial browser@4; clases utility, flex/grid y breakpoints; sin CSS manual ni otros frameworks | Inspección de código y DOM |
-| Layout y componentes | Tres KPIs arriba, tres drivers en el centro, campañas debajo; tarjetas con patrones compartidos | Inspección visual en Chrome |
-| Responsividad | Base móvil; sm, md, lg y xl; columnas de tabla prioritarias y detalles HTML | 320, 390, 640, 768, 1024, 1280 y 1440 px, sin desbordamiento horizontal |
-| Accesibilidad de uso | Enlace para saltar al main, foco visible, navegación por anclas, desplegables nativos | Seis campañas abiertas mediante Enter a 320 px, fórmulas comprobadas con teclado |
-| Datos de ejemplo | Productos A/B/C a 50/120/80 €, comisión del 15 %, cifras consistentes | 400 ventas; 30.000 € vendidos; 4.500 € en comisiones; 1.500 € de costes |
+| Criterio             | Implementación                                                                                                               | Comprobación                                                                     |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| HTML semántico       | Un main y un h1, header, nav, aside, section y siete article, table con caption, thead, tbody, tfoot y encabezados scope=col | html-validate sin errores                                                        |
+| Tailwind CSS v4      | CDN oficial browser@4; clases utility, flex/grid y breakpoints; sin CSS manual ni otros frameworks                           | Inspección de código y DOM                                                       |
+| Layout y componentes | Cuatro KPIs arriba, tres drivers en el centro, campañas debajo; tarjetas con patrones compartidos                            | Inspección visual en Chrome                                                      |
+| Responsividad        | Base móvil; sm, md, lg y xl; columnas de tabla prioritarias y detalles HTML                                                  | 320, 390, 640, 768, 1024, 1152, 1280 y 1440 px, sin desbordamiento horizontal    |
+| Accesibilidad de uso | Enlace para saltar al main, foco visible, navegación por anclas, desplegables nativos                                        | Seis campañas abiertas mediante Enter a 320 px, fórmulas comprobadas con teclado |
+| Datos de ejemplo     | Productos A/B/C a 50/120/80 €, comisión del 15 %, cifras consistentes                                                        | 400 ventas; 30.000 € vendidos; 4.500 € en comisiones; 1.500 € de costes          |
 
 Las capturas de móvil, tablet y escritorio están en `docs/`. No se han probado dispositivos físicos ni otros motores de navegador. La entrega usa el CDN requerido por el enunciado; Tailwind genera las media queries de sus clases responsive, sin CSS personalizado.
 

@@ -5,7 +5,7 @@
   },
   "description": {
     "en": "Responsive educational dashboard built with HTML and Tailwind CSS v4.",
-    "es": "Dashboard educativo responsive con tres KPIs, tres drivers y una tabla de campañas."
+    "es": "Dashboard educativo responsive con cuatro KPIs, tres drivers y una tabla de campañas."
   },
   "projectType": "project",
   "difficulty": "beginner",
